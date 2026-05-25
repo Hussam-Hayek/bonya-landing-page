@@ -754,9 +754,20 @@ export default function BonyaLanding() {
         </motion.div>
       </section>
 
-      {/* ── About Section ───────────────────────────────────────────────────────── */}
-      <section id="about" className="py-24 bg-gradient-to-b from-stone-50 to-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-emerald-100/40 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      {/* ── About Section ─────────────────────────────────────────────────────── */}
+      <section id="about" className="py-24 relative overflow-hidden">
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-50 via-white to-emerald-50/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(13,75,67,0.08),transparent)]" />
+        
+        {/* Decorative gradient orbs */}
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-emerald-200/40 via-teal-100/30 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-amber-100/30 via-yellow-50/20 to-transparent rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+        <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-gradient-to-r from-emerald-50/20 via-transparent to-teal-50/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        
+        {/* Subtle mesh pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230D4B43' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image side */}
@@ -846,10 +857,20 @@ export default function BonyaLanding() {
       </section>
 
       {/* ── Coverage Map Section ──────────────────────────────────────────────────── */}
-      <section className="py-20 bg-[#1a2f4a] relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden">
+        {/* Multi-layer gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a2f4a] via-[#162847] to-[#0f1f35]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/20 via-transparent to-teal-950/10" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_50%_at_50%_0%,rgba(212,175,106,0.05),transparent)]" />
+        
+        {/* Decorative gradient orbs */}
+        <div className="absolute top-0 left-1/4 w-[500px] h-[300px] bg-gradient-to-b from-teal-800/15 via-emerald-900/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[250px] bg-gradient-to-t from-slate-700/15 via-blue-900/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-0 w-[300px] h-[400px] bg-gradient-to-r from-emerald-900/10 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        
         {/* Subtle pattern */}
         <div
-          className="absolute inset-0 opacity-[0.03] pointer-events-none"
+          className="absolute inset-0 opacity-[0.035] pointer-events-none"
           style={{
             backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 0)`,
             backgroundSize: '30px 30px',
@@ -951,9 +972,17 @@ export default function BonyaLanding() {
         </div>
       </section>
 
-      {/* ── Access Portal ───────────────────────────────────��───────────────────── */}
-      <section id="access-portal" className="py-24 bg-gradient-to-b from-white to-stone-50 relative overflow-hidden">
-        <div className="absolute top-1/2 right-0 w-96 h-96 bg-emerald-50 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 opacity-60" />
+      {/* ── Access Portal ─────────────────────────────────────────────────────── */}
+      <section id="access-portal" className="py-24 relative overflow-hidden">
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-tl from-stone-100 via-white to-emerald-50/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_80%,rgba(13,75,67,0.06),transparent)]" />
+        
+        {/* Decorative gradient orbs */}
+        <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-bl from-teal-100/40 via-emerald-50/30 to-transparent rounded-full blur-3xl translate-x-1/3 -translate-y-1/3" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-slate-100/50 via-stone-50/30 to-transparent rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
+        <div className="absolute top-1/2 left-1/4 w-[300px] h-[300px] bg-gradient-to-r from-amber-50/20 to-transparent rounded-full blur-2xl" />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full uppercase tracking-wider mb-4">
@@ -1030,8 +1059,16 @@ export default function BonyaLanding() {
       </section>
 
       {/* ── Contact ────────────────────────────────────────────────────────────── */}
-      <section id="contact" className="py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="py-24 relative overflow-hidden">
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-stone-50/50 to-emerald-50/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_20%_100%,rgba(13,75,67,0.05),transparent)]" />
+        
+        {/* Decorative gradient orbs */}
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-emerald-100/40 via-teal-50/30 to-transparent rounded-full blur-3xl -translate-x-1/4 translate-y-1/4" />
+        <div className="absolute top-0 right-0 w-[350px] h-[350px] bg-gradient-to-bl from-amber-50/30 via-yellow-50/20 to-transparent rounded-full blur-3xl translate-x-1/4 -translate-y-1/4" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full uppercase tracking-wider mb-4">
               {t.contact.tag}
@@ -1069,10 +1106,20 @@ export default function BonyaLanding() {
       </section>
 
       {/* ── Footer ────────────────────────────────────────────────────────────── */}
-      <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-white py-16 relative overflow-hidden">
+      <footer className="relative text-white py-16 overflow-hidden">
+        {/* Multi-layer gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-emerald-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-emerald-900/10" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_100%,rgba(13,75,67,0.15),transparent)]" />
+        
+        {/* Decorative gradient orbs */}
+        <div className="absolute bottom-0 left-1/4 w-[600px] h-[300px] bg-gradient-to-t from-emerald-800/20 via-teal-900/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 right-1/4 w-[400px] h-[200px] bg-gradient-to-b from-slate-700/20 via-slate-800/10 to-transparent rounded-full blur-3xl" />
+        
+        {/* Dot pattern overlay */}
         <div
-          className="absolute inset-0 opacity-[0.035] pointer-events-none"
-          style={{ backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 0)`, backgroundSize: '40px 40px' }}
+          className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          style={{ backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 0)`, backgroundSize: '40px 40px' }}
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid md:grid-cols-4 gap-12 mb-12 pb-12 border-b border-slate-800">
