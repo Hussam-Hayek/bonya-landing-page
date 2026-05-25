@@ -226,108 +226,164 @@ function LanguageToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => v
 
 // ─── Saudi Arabia Map SVG ─────────────────────────────────────────────────────
 function SaudiMap({ activeRegion, setActiveRegion, regions }: { activeRegion: string | null; setActiveRegion: (id: string | null) => void; regions: typeof translations.en.coverage.regions }) {
-  // Location positions on the map (approximate coordinates)
+  // Location positions on the map (coordinates matching the accurate Saudi Arabia shape)
   const locations = [
-    { id: 'neom', x: 105, y: 95, name: regions.find(r => r.id === 'neom')?.name },
-    { id: 'madinah', x: 145, y: 155, name: regions.find(r => r.id === 'madinah')?.name },
-    { id: 'jeddah', x: 135, y: 210, name: regions.find(r => r.id === 'jeddah')?.name },
-    { id: 'makkah', x: 155, y: 230, name: regions.find(r => r.id === 'makkah')?.name },
-    { id: 'riyadh', x: 255, y: 185, name: regions.find(r => r.id === 'riyadh')?.name },
-    { id: 'dammam', x: 310, y: 150, name: regions.find(r => r.id === 'dammam')?.name },
-    { id: 'asir', x: 175, y: 295, name: regions.find(r => r.id === 'asir')?.name },
+    { id: 'neom', x: 115, y: 65, name: regions.find(r => r.id === 'neom')?.name },
+    { id: 'madinah', x: 145, y: 115, name: regions.find(r => r.id === 'madinah')?.name },
+    { id: 'jeddah', x: 135, y: 160, name: regions.find(r => r.id === 'jeddah')?.name },
+    { id: 'makkah', x: 148, y: 175, name: regions.find(r => r.id === 'makkah')?.name },
+    { id: 'riyadh', x: 248, y: 145, name: regions.find(r => r.id === 'riyadh')?.name },
+    { id: 'dammam', x: 295, y: 105, name: regions.find(r => r.id === 'dammam')?.name },
+    { id: 'asir', x: 165, y: 235, name: regions.find(r => r.id === 'asir')?.name },
   ];
 
   return (
-    <svg viewBox="0 0 420 380" className="w-full h-auto max-w-lg">
-      {/* Saudi Arabia outline - simplified shape */}
+    <svg viewBox="0 0 400 320" className="w-full h-auto max-w-xl">
+      {/* Definitions for gradients and filters */}
+      <defs>
+        <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#1e3a5f" />
+          <stop offset="100%" stopColor="#162d4d" />
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="2" dy="4" stdDeviation="4" floodColor="#0a1628" floodOpacity="0.5"/>
+        </filter>
+      </defs>
+
+      {/* Saudi Arabia accurate outline */}
       <motion.path
-        d="M 100 80 
-           L 140 60 
-           L 200 55 
-           L 280 70 
-           L 340 100 
-           L 360 140 
-           L 350 180 
-           L 330 200 
-           L 300 230 
-           L 260 280 
-           L 220 320 
-           L 180 340 
-           L 140 330 
-           L 110 290 
-           L 95 240 
-           L 100 200 
-           L 90 160 
-           L 85 120 
-           Z"
-        fill="#1e3a5f"
-        stroke="#2d4a6f"
-        strokeWidth="2"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 1 }}
-        transition={{ duration: 1.5, ease: "easeInOut" }}
+        d="M 105 25 
+           L 115 22 L 125 20 L 140 18 L 155 20 L 170 22 
+           L 185 25 L 200 28 L 215 32 L 230 38 L 245 45 
+           L 260 52 L 275 60 L 290 70 L 305 80 L 318 92
+           L 328 105 L 335 118 L 340 132 L 342 145 L 340 158
+           L 335 168 L 328 178 L 318 186 L 305 192 L 292 196
+           L 280 200 L 268 205 L 256 212 L 245 220 L 235 230
+           L 225 242 L 215 255 L 205 268 L 192 278 L 178 285
+           L 165 290 L 152 292 L 140 290 L 130 285 L 122 278
+           L 115 268 L 110 255 L 108 242 L 110 228 L 115 215
+           L 118 200 L 115 185 L 110 170 L 105 155 L 100 140
+           L 95 125 L 92 110 L 90 95 L 88 80 L 90 65 
+           L 95 50 L 100 38 L 105 25 Z"
+        fill="url(#mapGradient)"
+        stroke="#3d5a7f"
+        strokeWidth="1.5"
+        filter="url(#shadow)"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
       />
       
-      {/* Coastlines */}
+      {/* Inner detail stroke for depth */}
       <path
-        d="M 85 120 L 90 160 L 100 200 L 95 240 L 110 290"
+        d="M 105 25 
+           L 115 22 L 125 20 L 140 18 L 155 20 L 170 22 
+           L 185 25 L 200 28 L 215 32 L 230 38 L 245 45 
+           L 260 52 L 275 60 L 290 70 L 305 80 L 318 92
+           L 328 105 L 335 118 L 340 132 L 342 145 L 340 158
+           L 335 168 L 328 178 L 318 186 L 305 192 L 292 196
+           L 280 200 L 268 205 L 256 212 L 245 220 L 235 230
+           L 225 242 L 215 255 L 205 268 L 192 278 L 178 285
+           L 165 290 L 152 292 L 140 290 L 130 285 L 122 278
+           L 115 268 L 110 255 L 108 242 L 110 228 L 115 215
+           L 118 200 L 115 185 L 110 170 L 105 155 L 100 140
+           L 95 125 L 92 110 L 90 95 L 88 80 L 90 65 
+           L 95 50 L 100 38 L 105 25 Z"
         fill="none"
-        stroke="#3d5a7f"
-        strokeWidth="1.5"
-        strokeDasharray="4 2"
-        opacity="0.5"
+        stroke="#4a6a8f"
+        strokeWidth="0.5"
+        transform="translate(2, 2)"
+        opacity="0.3"
       />
-      <path
-        d="M 340 100 L 360 140 L 350 180 L 330 200"
+
+      {/* Red Sea coastline (west) */}
+      <motion.path
+        d="M 90 65 L 95 50 L 100 38 L 105 25 L 105 25 L 100 38 L 95 50 L 90 65 L 88 80 L 90 95 L 92 110 L 95 125 L 100 140 L 105 155 L 110 170 L 115 185 L 118 200 L 115 215 L 110 228 L 108 242 L 110 255 L 115 268 L 122 278"
         fill="none"
-        stroke="#3d5a7f"
-        strokeWidth="1.5"
-        strokeDasharray="4 2"
-        opacity="0.5"
+        stroke="#5a7a9f"
+        strokeWidth="2"
+        strokeLinecap="round"
+        opacity="0.4"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 2, delay: 0.5 }}
+      />
+
+      {/* Persian Gulf coastline (east) */}
+      <motion.path
+        d="M 318 92 L 328 105 L 335 118 L 340 132 L 342 145 L 340 158 L 335 168 L 328 178 L 318 186"
+        fill="none"
+        stroke="#5a7a9f"
+        strokeWidth="2"
+        strokeLinecap="round"
+        opacity="0.4"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 1.5, delay: 0.8 }}
       />
 
       {/* Location markers */}
       {locations.map((loc, i) => (
-        <g key={loc.id}>
+        <g key={loc.id} className="cursor-pointer">
           {/* Pulse ring for active */}
           {activeRegion === loc.id && (
-            <motion.circle
-              cx={loc.x}
-              cy={loc.y}
-              r="18"
-              fill="none"
-              stroke="#D4AF6A"
-              strokeWidth="2"
-              initial={{ scale: 0.8, opacity: 1 }}
-              animate={{ scale: 1.5, opacity: 0 }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
+            <>
+              <motion.circle
+                cx={loc.x}
+                cy={loc.y}
+                r="16"
+                fill="none"
+                stroke="#D4AF6A"
+                strokeWidth="2"
+                initial={{ scale: 0.8, opacity: 1 }}
+                animate={{ scale: 2, opacity: 0 }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              />
+              <motion.circle
+                cx={loc.x}
+                cy={loc.y}
+                r="16"
+                fill="none"
+                stroke="#D4AF6A"
+                strokeWidth="1"
+                initial={{ scale: 0.8, opacity: 0.8 }}
+                animate={{ scale: 2.5, opacity: 0 }}
+                transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
+              />
+            </>
           )}
           
           {/* Outer glow */}
           <motion.circle
             cx={loc.x}
             cy={loc.y}
-            r="12"
+            r="14"
             fill="#D4AF6A"
-            opacity="0.2"
+            opacity={activeRegion === loc.id ? 0.3 : 0.15}
+            filter="url(#glow)"
             initial={{ scale: 0 }}
-            animate={{ scale: activeRegion === loc.id ? 1.3 : 1 }}
+            animate={{ scale: activeRegion === loc.id ? 1.2 : 1 }}
             transition={{ delay: i * 0.1, duration: 0.3 }}
           />
           
-          {/* Main dot */}
+          {/* Main dot with gradient */}
           <motion.circle
             cx={loc.x}
             cy={loc.y}
-            r="8"
-            fill={activeRegion === loc.id ? '#D4AF6A' : '#1e3a5f'}
+            r="9"
+            fill={activeRegion === loc.id ? '#D4AF6A' : '#243b5a'}
             stroke="#D4AF6A"
-            strokeWidth="2"
-            className="cursor-pointer"
+            strokeWidth="2.5"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            whileHover={{ scale: 1.3 }}
+            whileHover={{ scale: 1.25 }}
             transition={{ delay: 0.5 + i * 0.1, type: 'spring', stiffness: 400 }}
             onMouseEnter={() => setActiveRegion(loc.id)}
             onMouseLeave={() => setActiveRegion(null)}
@@ -338,7 +394,7 @@ function SaudiMap({ activeRegion, setActiveRegion, regions }: { activeRegion: st
           <motion.circle
             cx={loc.x}
             cy={loc.y}
-            r="3"
+            r="3.5"
             fill={activeRegion === loc.id ? '#1e3a5f' : '#D4AF6A'}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -346,21 +402,34 @@ function SaudiMap({ activeRegion, setActiveRegion, regions }: { activeRegion: st
             className="pointer-events-none"
           />
           
-          {/* Label */}
-          <motion.text
-            x={loc.x}
-            y={loc.y - 18}
-            textAnchor="middle"
-            fill="white"
-            fontSize="11"
-            fontWeight="500"
-            className="pointer-events-none select-none"
+          {/* Label with background */}
+          <motion.g
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 + i * 0.1 }}
+            className="pointer-events-none"
           >
-            {loc.name}
-          </motion.text>
+            <rect
+              x={loc.x - 35}
+              y={loc.y - 30}
+              width="70"
+              height="16"
+              rx="4"
+              fill={activeRegion === loc.id ? '#D4AF6A' : 'rgba(30, 58, 95, 0.9)'}
+              opacity={activeRegion === loc.id ? 1 : 0.85}
+            />
+            <text
+              x={loc.x}
+              y={loc.y - 19}
+              textAnchor="middle"
+              fill={activeRegion === loc.id ? '#1a2f4a' : 'white'}
+              fontSize="10"
+              fontWeight="600"
+              className="select-none"
+            >
+              {loc.name}
+            </text>
+          </motion.g>
         </g>
       ))}
     </svg>
