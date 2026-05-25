@@ -50,6 +50,22 @@ const translations = {
         { title: '24/7 Support', desc: 'Round-the-clock customer support for orders and technical inquiries.' },
       ],
     },
+    coverage: {
+      tag: 'ACROSS THE KINGDOM',
+      title: 'Wherever the Kingdom builds,',
+      title2: 'we deliver.',
+      sub: 'Active sourcing and delivery capability across seven regions — from Tabuk in the north-west to Asir in the south-west, anchored in Riyadh.',
+      hint: 'HOVER OR TAP A REGION',
+      regions: [
+        { id: 'neom', name: 'NEOM / Tabuk', title: 'Northwest — NEOM / Tabuk', desc: 'Supporting NEOM mega-projects and Tabuk developments with premium construction materials and rapid logistics.' },
+        { id: 'madinah', name: 'Madinah', title: 'West — Madinah', desc: 'Serving the holy city expansion projects with certified materials meeting the highest quality standards.' },
+        { id: 'jeddah', name: 'Jeddah', title: 'Western — Jeddah', desc: 'The commercial hub of the west coast — supporting major infrastructure and urban development projects.' },
+        { id: 'makkah', name: 'Makkah', title: 'Holy Region — Makkah', desc: 'Providing premium materials for expansion projects in the holiest city, meeting stringent specifications.' },
+        { id: 'riyadh', name: 'Riyadh', title: 'Central — Riyadh', desc: 'Our headquarters and primary hub — serving the capital\'s rapid urban expansion and mega-projects.' },
+        { id: 'dammam', name: 'Dammam', title: 'Eastern — Dammam / Khobar', desc: 'The industrial backbone — Aramco-zone and downstream petrochemical site supply with grade-traceable cement.' },
+        { id: 'asir', name: 'Asir', title: 'Southwest — Asir', desc: 'Mountain region expertise — specialized logistics for challenging terrain and tourism development projects.' },
+      ],
+    },
     portal: {
       tag: 'Portals', title: 'Access Your Portal',
       sub: "Choose your portal to login or register. Whether you're a customer or a partner, we've got you covered.",
@@ -62,7 +78,7 @@ const translations = {
     contact: {
       tag: 'Get in Touch', title: 'Contact Us',
       sub: 'Get in touch with our team for inquiries, support, or partnership opportunities.',
-      cards: [{ title: 'Email Address', val: 'info@dealcom.com' }, { title: 'Phone Number', val: '+1 (234) 567-890' }, { title: 'Office Location', val: 'Visit us during business hours' }],
+      cards: [{ title: 'Email Address', val: 'info@bonya.com' }, { title: 'Phone Number', val: '+966 920011074' }, { title: 'Office Location', val: 'Riyadh, Saudi Arabia' }],
     },
     footer: {
       tagline: 'Leading provider of premium construction materials and logistics solutions, building the infrastructure of tomorrow.',
@@ -100,6 +116,22 @@ const translations = {
         { title: 'دعم ٢٤/٧', desc: 'دعم عملاء على مدار الساعة للطلبات والاستفسارات الفنية.' },
       ],
     },
+    coverage: {
+      tag: 'عبر المملكة',
+      title: 'أينما تبني المملكة،',
+      title2: 'نوصل.',
+      sub: 'قدرة توريد وتوصيل نشطة عبر سبع مناطق — من تبوك في الشمال الغربي إلى عسير في الجنوب الغربي، بمركزنا في الرياض.',
+      hint: 'مرر أو اضغط على المنطقة',
+      regions: [
+        { id: 'neom', name: 'نيوم / تبوك', title: 'الشمال الغربي — نيوم / تبوك', desc: 'دعم مشاريع نيوم الضخمة وتطويرات تبوك بمواد بناء متميزة ولوجستيات سريعة.' },
+        { id: 'madinah', name: 'المدينة', title: 'الغرب — المدينة المنورة', desc: 'خدمة مشاريع توسعة المدينة المقدسة بمواد معتمدة تلبي أعلى معايير الجودة.' },
+        { id: 'jeddah', name: 'جدة', title: 'الغربية — جدة', desc: 'المركز التجاري للساحل الغربي — دعم مشاريع البنية التحتية والتطوير العمراني الكبرى.' },
+        { id: 'makkah', name: 'مكة', title: 'المنطقة المقدسة — مكة المكرمة', desc: 'توفير مواد متميزة لمشاريع التوسعة في أقدس المدن، تلبي المواصفات الصارمة.' },
+        { id: 'riyadh', name: 'الرياض', title: 'الوسطى — الرياض', desc: 'مقرنا الرئيسي ومركزنا الأساسي — خدمة التوسع العمراني السريع للعاصمة والمشاريع الضخمة.' },
+        { id: 'dammam', name: 'الدمام', title: 'الشرقية — الدمام / الخبر', desc: 'العمود الفقري الصناعي — توريد مناطق أرامكو والمواقع البتروكيماوية بإسمنت قابل للتتبع.' },
+        { id: 'asir', name: 'عسير', title: 'الجنوب الغربي — عسير', desc: 'خبرة المناطق الجبلية — لوجستيات متخصصة للتضاريس الصعبة ومشاريع تطوير السياحة.' },
+      ],
+    },
     portal: {
       tag: 'البوابات', title: 'ادخل إلى بوابتك',
       sub: 'اختر بوابتك لتسجيل الدخول أو التسجيل، سواء كنت عميلاً أو شريكاً.',
@@ -112,7 +144,7 @@ const translations = {
     contact: {
       tag: 'تواصل معنا', title: 'اتصل بنا',
       sub: 'تواصل مع فريقنا للاستفسارات والدعم وفرص الشراكة.',
-      cards: [{ title: 'البريد الإلكتروني', val: 'info@dealcom.com' }, { title: 'رقم الهاتف', val: '+1 (234) 567-890' }, { title: 'موقع المكتب', val: 'زورنا خلال ساعات العمل' }],
+      cards: [{ title: 'البريد الإلكتروني', val: 'info@bonya.com' }, { title: 'رقم الهاتف', val: '+966 920011074' }, { title: 'موقع المكتب', val: 'الرياض، المملكة العربية السعودية' }],
     },
     footer: {
       tagline: 'مزود رائد لمواد البناء الفاخرة والحلول اللوجستية، نبني البنية التحتية لغد أفضل.',
@@ -192,6 +224,296 @@ function LanguageToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => v
   );
 }
 
+// ─── Saudi Arabia Map SVG (Accurate from @svg-maps/saudi-arabia) ──────────────
+function SaudiMap({ activeRegion, setActiveRegion, regions }: { activeRegion: string | null; setActiveRegion: (id: string | null) => void; regions: typeof translations.en.coverage.regions }) {
+  // Location positions on the accurate Saudi Arabia map (viewBox 0 0 730 600)
+  const locations = [
+    { id: 'neom', x: 90, y: 145, name: regions.find(r => r.id === 'neom')?.name },
+    { id: 'madinah', x: 130, y: 235, name: regions.find(r => r.id === 'madinah')?.name },
+    { id: 'jeddah', x: 145, y: 340, name: regions.find(r => r.id === 'jeddah')?.name },
+    { id: 'makkah', x: 175, y: 370, name: regions.find(r => r.id === 'makkah')?.name },
+    { id: 'riyadh', x: 370, y: 330, name: regions.find(r => r.id === 'riyadh')?.name },
+    { id: 'dammam', x: 530, y: 250, name: regions.find(r => r.id === 'dammam')?.name },
+    { id: 'asir', x: 270, y: 500, name: regions.find(r => r.id === 'asir')?.name },
+  ];
+
+  return (
+    <svg viewBox="0 0 730 600" className="w-full h-auto max-w-2xl">
+      {/* Definitions for gradients and filters */}
+      <defs>
+        <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#1e3a5f" />
+          <stop offset="100%" stopColor="#162d4d" />
+        </linearGradient>
+        <linearGradient id="regionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#243b5a" />
+          <stop offset="100%" stopColor="#1a2d47" />
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="3" dy="5" stdDeviation="6" floodColor="#0a1628" floodOpacity="0.6"/>
+        </filter>
+      </defs>
+
+      {/* All regions combined for the country outline with shadow */}
+      <g filter="url(#shadow)">
+        {/* Tabuk Region (Northwest - includes NEOM) */}
+        <motion.path
+          d="M89.197176,284.95041 l1.2,0.84 0,0.66 -1.49,-0.68 0.29,-0.82z m-7.94,-17.27 0.92,0.6 0.42,-0.21 0.96,2.68 -0.7,0 0.08,-1.17 -2.04,-1.11 0.36,-0.79z m4.56,-1.3 0.65,0.16 0.38,1.27 0.55,-0.18 -0.26,0.83 -0.21,-0.47 -1.25,0.04 0.41,-1.09 -0.67,-0.43 0.4,-0.13z m-0.81,-1.47 0.9,0.87 -1.33,-0.1 0.43,-0.77z m-3.62,-2.17 0.56,0.93 -0.85,0.56 -0.43,-0.67 0.72,-0.82z m2.01,-0.4 0.94,2.34 -1.03,-0.85 0.09,-1.49z m0.41,-0.85 0.41,0.44 -0.26,0.62 -0.63,-0.79 0.48,-0.27z m-14.24,-2.19 1.39,1.61 -1.55,0.1 -0.63,-1.01 0.79,-0.7z m2.62,-1.99 0.67,0.53 -0.74,0.07 -1.33,-1.36 -0.02,-1.67 0.47,1.79 1.05,-0.63 -0.1,1.27z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        />
+        
+        {/* Riyadh Region (Central) */}
+        <motion.path
+          d="m456.82718,487.03041 -10.13,2.63 -16.39,2.39 -58.85,5.04 -8.85,-0.7 -3.24,-0.72 -5.22,-2.39 -8.51,-5.59 0,0 -13.54,-12.09 -3.91,-6.36 -2.75,-2.96 -0.22,-1.6 1.23,-6.11 3.34,-6.09 0.08,-2.96 -1.06,-1.73 -3.6,-3.6 -3.07,-4.93 -5.76,-5.01 0,0 -4.34,-7.06 -4.77,-6.36 -0.58,-1.47 1.76,-8.48 -0.54,-6.95 2.33,-3.42 0.68,-2.34 -1.79,-13.1 0.96,-6.16 -0.31,-1.57 -6.45,-1.41 -5.65,1.47 -3.7,-1.28 -1.26,-2.3 0.28,-5.34 0.86,-2.93 -1.84,-1.88 -3.09,-0.85 -14.1,-0.63 -3.01,-1.63 -5.15,-11.26 -0.91,-5.64 -2.1,-4.72 -1.13,-4.86 -4.16,-3.3 -0.36,-3.13 0.44,-3.64 0,0 -0.04,-9.03 1.41,-4.88 -0.94,-3.6 2.95,-4.25 0.4,-3.14 0,0 3.04,-5.08 2.17,-1.58 1.5,0.12 5.17,2.55 3.87,0.81 5.73,0.5 5.67,-0.89 5.69,0.87 2.43,-1.79 0.85,-2.18 -1.91,-3.83 0.15,-2.3 5.42,-6.69 3.27,-2.52 12.88,-3.15 2.84,-2.81 3.09,-1.74 2.28,-4.47 2.02,-1.97 3.13,-0.82 8.3,1.06 7.2,-0.68 5.53,0.22 0.84,-3.9 -0.31,-3.16 -2.52,-4.86 1.08,-2.91 -0.14,-0.86 -6.69,-10.16 -3.6,-3.57 -0.49,-1.52 0.84,-5.74 -0.43,-5.12 4.01,-1.1 4.5,-5.87 2.46,-2.11 4.18,-1.84 0.62,-1.48 -0.15,-2.5 -1.34,-2.5 -3.6,-2.99 -2.35,-0.93 0,0 -0.68,-1.88 0.06,-1.59 0.99,-3.1 2.42,-3.32 3.15,-1.64 0,0 1.94,2.12 1.51,0.52 1.8,-0.86 1.3,-2.23 0,0 3.32,2.32 2.12,2.21 1.4,5.11 1.24,1.53 10.41,6.08 5.75,1.06 3.46,4.22 4.06,3.38 2.34,0.63 5.64,0.11 3.01,0.81 9.86,6.94 2.49,1.19 2.36,0.05 4.41,-1.01 1.55,0.22 6.45,6.08 1.47,2.52 8.88,3.16 3.86,2.08 1.09,2.56 0.43,4.96 0.38,22.63 -0.63,15.07 0.35,7.41 0.68,3.7 1.12,1.79 2.28,1.8 9.44,6.3 9.19,9.16 1.68,2.06 2.95,5.78 1.36,6.89 -0.02,7.75z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        />
+        
+        {/* Mecca Region (Western) */}
+        <motion.path
+          d="m143.70718,343.80041 0,0 0.12,-0.02 -0.12,0.02z m114.74,-19.79 -0.44,3.64 0.36,3.13 4.15,3.3 1.13,4.86 2.11,4.72 0.91,5.64 5.15,11.26 3.01,1.63 14.1,0.63 3.09,0.85 1.84,1.88 -0.85,2.93 -0.29,5.33 1.26,2.31 3.7,1.28 5.65,-1.47 6.45,1.41 0.31,1.57 -0.96,6.17 1.79,13.1 -0.68,2.34 -2.33,3.43 0.55,6.94 -1.76,8.48 0.58,1.47 4.77,6.36 4.34,7.06 0,0 -4.02,1.47 -5.71,3.77 -5.22,-1.3 -2.26,0.25 -3.16,1.52 -4.55,0.28 -4.26,3.81 -6.41,3.06 -10.11,9.24 -2.31,1.14 -2.29,-0.24 -1.4,-1.02 -4.67,-9.07 0,0 -1.98,-1.93 -1.48,-0.22 -5.42,2.76 -4.16,-0.2 -4.61,1.77 -1.91,-1.46 -1.28,-3.77 -1.22,-1.45 -1.43,-0.61 -2.26,0.32 -1.36,1.41 -0.7,2.12 1.11,4.54 -0.12,2.36 -2.69,4.63 -1.37,3.56 -7.73,1.86 -4,4.1 0.17,1.42 0.67,0.7 3.66,1.09 0.97,1.53 -0.31,5.28 0.91,3.89 -0.27,4.44 1.3,1.54 3.69,2.13 2.06,3.06 1.59,1.05 2.59,0 2.21,-1.08 2.58,-8.98 2.4,-4.46 1.52,-0.59 4.61,-0.04 0.79,-0.5 0,0 1.51,-0.74 2.29,0.13 1.85,1.88 0.21,1.52 -1.31,6.92 2.19,4.44 -1.27,4.6 -0.76,1.42 -1.52,0.75 -4.74,-0.43 -2.24,0.37 -3.88,2.82 -0.75,0.06 -1.97,-1.87 -0.49,10 0.61,2.97 1.02,1.48 1.44,0.48 6.71,0.21 2.11,1.21 2.98,9.14 -1.5,6.41z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        />
+        
+        {/* Medina Region */}
+        <motion.path
+          d="m130.84718,324.65041 -0.9,-0.61 -0.33,0.61 -0.7,-0.29 -0.33,-0.44 -1.1,-1 0.38,-0.9 -1,0.41 -1.03,-1.53 -1.82,-1.19 0.16,-0.31 -0.62,-0.34 -1.13,0.46 -3.64,-2.84 0.62,-0.51 -0.59,-0.29 0.58,-1.68 -1.39,0.76 0.45,0.38 -0.44,1.27 -1.68,-0.19 -2.75,-2.06 -1.19,-2.11 -0.79,0.16 -0.38,-0.71 -0.69,-0.14 -0.09,-0.83 -1.55,0.6 -1.04,-0.36 -0.08,0.81 0.54,0.16 -0.37,0.91 -1.51,0.05 -0.66,-0.98 -1.17,0.09 -1.82,-2.71 -1.49,-1.07 0.31,-1.82 0.67,0.46 0.26,-1.12 -1.18,-1.47 -0.42,-1.45 -1.04,-0.88z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        />
+        
+        {/* Eastern Province */}
+        <motion.path
+          d="m545.08718,262.60041 1.22,0.53 0.35,2.07 -0.6,-1.32 -1.01,-0.6 0.04,-0.68z m-8.35,-39.01 0.87,0.69 -0.05,1.6 -1.18,-1.16 -1.01,-0.12 0.21,-0.65 1.16,-0.36z m-18.37,-29.14 1.75,1.05 4.11,1.08 -1.87,0.05 -0.52,-0.26 -2.37,0.75 -0.45,-0.6 0.45,-0.25 -0.11,-0.49 -1.17,-0.55 -2.13,2.34 0.34,0.57 -0.4,-0.13 -0.22,-0.78 0.55,-1.55 0.7,-0.87 1.34,-0.36z m19.57,33.55 0.38,0.99 0.46,-1.63 0.45,0.11 -0.06,2.39 0.79,0.44 1.19,-1.76 -0.36,-0.33 0.38,-1.81 0.25,0.39 0.12,1.06 0.38,-0.61 0.05,1.18 -0.98,0.58 0.08,1.05 -0.63,0.11 1.65,1.52 0.52,1.62 -0.54,4.1 0.45,0.68 -0.36,0.03 -0.1,1.48 -1,1.13 0.19,-0.78 -0.87,-1.22 -0.16,2.24 0.42,0.52 -0.83,2.12 0.19,1.3 -0.75,0.42 -2.62,-5.96 -0.76,-0.54 -0.52,0.32 -1.15,2.79 0.89,1.29 -0.52,0.67 0.04,3.02 0.61,0.16 0.8,-0.92 0.81,0.74 1.37,0.1 0.5,0.75 -0.15,0.79 0.63,0.57 -0.69,0.16 -0.37,1.04 1.28,2.91 1.81,2.68 1.09,0.66 0.7,2.02 0.75,0.4 -0.23,0.88 -0.41,0.18 -0.4,-1.47 -1.42,-0.33 -1,-1.47 -0.55,0.17 -0.47,-0.58 0.68,1.74 1.09,0.76 0.05,0.56 0.51,-0.72 0.22,0.28 0.24,1.8 1.28,1.16 0.67,1.46 1.26,0.44 0.07,1.1 2.04,2.54 0.4,0.04 -0.05,-1.1 -0.68,-0.91 0.66,-0.53 0.62,1.64 3.23,2.49 1.33,4.04 -0.34,2.41 1.25,2.03 -0.41,1.78 0.83,2.56 -0.27,0.88 0.89,0.45 -0.5,-0.65 0.32,-0.82 2.52,3.53 1.05,3.3 0.95,0.04 0.54,0.69 1.49,6.53 0.64,-1.84 1.58,-0.3 -0.25,0.48 1.08,2.13 3.69,4.38 4.58,0.8 2.45,-0.96 1.63,-1.8 1.16,0.39 1,-0.33 -0.1,0.51 0.6,0.44 0.76,-0.35 -0.66,1.28 0.13,2.42 1.45,-0.87 0.37,-1.39 1.6,-1.3 -0.09,-0.95 0.89,0.53 0.53,-0.43 0.41,1.64 1.03,-0.58 0.76,0.76 -0.62,0.64 -1.21,0.07 -0.54,0.95 -0.44,-0.16 -0.42,1.48 -3.07,2.44 -0.6,3.09 -0.56,0.13 0.13,1.7 2.24,0.42 0.9,-1.18 2.03,-0.18 1.67,0.66 1.51,2.12 1.63,-0.07 0.75,1.18 -0.51,4.23 34.3,41.63 23.79,4.76 59.71,13.76 7.05,-7.46 15.68,25.98 -22.97,73.24 -103.4,36.4 -39.96,7.94 -57.87,6.31 -32.09,15.68 -20.91,25.6 -4.87,12.21 -1.53,0.93z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        />
+        
+        {/* Asir Region (Southwest) */}
+        <motion.path
+          d="m303.24718,558.19041 -1.98,-3.01 -2.95,-0.6 -0.68,-0.57 -2.65,-4.63 -3.6,-1.82 0.14,-4.42 -1,-1.12 -2.21,0.88 -2.87,2.16 -1.21,2.1 -1.66,6.75 -0.57,0.66 -1.4,0.14 -1.52,-0.63 -3.25,-3.16 -1.59,-3.73 -1.28,-1.24 -8.28,-0.4 -0.73,-0.64 -0.85,-2.89 -1.08,-1.35 -2.16,-0.23 -2.94,0.45 -0.74,-0.47 -0.28,-1.5 0.83,-7.27 -1.27,-1.03 -4.46,0.47 0,0 1.5,-6.41 -2.97,-9.14 -2.11,-1.2 -6.71,-0.21 -1.43,-0.49 -1.03,-1.47 -0.61,-2.97 0.49,-10 1.97,1.88 0.75,-0.06 3.87,-2.82 2.24,-0.38 4.74,0.44 1.52,-0.75 0.76,-1.42 1.27,-4.6 -2.19,-4.44 1.31,-6.92 -0.21,-1.51 -1.85,-1.89 -2.29,-0.13 -1.5,0.74 0,0 4.26,-8.69 -0.23,-3.55 0.84,-1.79 5.82,-3.97 1.04,-1.45 -0.11,-1.59 -2.05,-1.97 -0.23,-0.79 2.15,-6.42 0,0 4.67,9.08 1.4,1.02 2.28,0.24 2.31,-1.13 10.11,-9.25 6.41,-3.06 4.26,-3.8 4.55,-0.28 3.16,-1.52 2.26,-0.24 5.21,1.3 5.72,-3.77 4.02,-1.46 0,0 5.76,5.01 3.07,4.93 3.6,3.6 1.06,1.73 -0.08,2.96 -3.34,6.09 -1.23,6.11 0.22,1.6 2.75,2.96 3.91,6.36 13.54,12.09 0,0 -0.04,6.08 -1.12,1.39 -3.85,1.94 -0.69,1.59 1.76,8.57 -0.17,2.12 -0.97,2.22 -1.22,1.41 -2.38,1.42 -6.32,2.02 -0.95,1.05 -1.06,3.02 -1.08,1.48 -8.21,7.56 -3.08,3.43 -0.88,1.69 -0.08,1.66 1.38,6.12 -0.77,8.37 -0.67,1.47 1.3,5.93 -1.15,3.24 0,0 -0.11,1.8 -2.37,-2.3 -5.29,-3.37 -2.46,-0.34z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        />
+        
+        {/* Ha'il Region */}
+        <motion.path
+          d="m183.65718,221.36041 1.99,-2.39 2.34,-7.76 3.13,-3.74 0,0 4.44,-4.13 0.29,-2.41 0,0 -0.36,-0.76 0,0 -2.95,-1.84 0,0 -0.82,-0.36 0,0 -3.73,-2.16 -1.4,-3.91 0,0 -0.14,-0.92 0,0 -0.39,-1.63 0,0 -2.24,-9.37 -1.05,-2.51 0,0 -1.4,-1.64 -2.37,-0.99 0,0 -0.77,-0.46 -1.33,-2.43 -0.75,-0.31 0,0 -2.31,-0.67 0,0 -1.3,-1.59 0,0 -2.94,-2.27 -4.95,-1.3 0,0 -1.54,-0.24 0,0 -4.08,-0.72 0,0 -2.36,-0.52 -1.13,-1.33z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        />
+        
+        {/* Al-Qassim Region */}
+        <motion.path
+          d="m238.57718,264.11041 1.2,-1.37 4.95,-0.74 6,-3.57 5.95,-0.77 0.81,-0.65 0.05,-0.82 -2.4,-4.78 0.32,-2.44 1.26,-1.51 0.86,-0.19 3.95,1.42 2.43,0.25 0.47,-0.77 -0.82,-6.33 1.89,-4.8 0.77,-0.41 1.6,0.52 3.32,-0.78 0.87,-4.3 4.75,-4.83 11.89,-9.24 11.31,-5.23 2.76,-5.79 2.72,-2.76 14.5,-7.43 4.15,-1.34 2.37,0.86 4.44,4.49 5.99,4.12 7.47,0.54 5.05,-5.84z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+        />
+        
+        {/* Northern Borders Region */}
+        <motion.path
+          d="m403.89718,130.68041 -12.46,4.39 -8.25,8.72 -12.66,23.68 -9.15,12.15 -1.29,4.67 0.39,1.52 1.47,1.83 0,0 -1.3,2.23 -1.8,0.86 -1.51,-0.52 -1.94,-2.12 0,0 -1.03,-1.87 -6.08,-5.52 -1.62,-0.95 -3.28,-1.26 -9.98,-1.29 -2.44,-1.44 -2.02,-2.48 -2.78,-7.7 -5.28,-9.66 -1.08,-1.62 -1.58,-1.23 -1.57,0.21 -5.05,3.38 -2.52,0.84 -6,-3.12 -6.49,0.31 -0.96,-0.31 -1.42,-1.46 -0.88,-6.22 -0.67,-0.8 -2.68,0.47 -4.62,2.48 -3.99,0.21 -2.52,-1.46 -4.2,-5.16 -2.37,-1.99 -14.47,-3.51 -4.45,0.36 -4.76,1.35 -12.17,-3.53 -20.96,4.87 -2.37,-0.37 -4.38,-1.9z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+        />
+        
+        {/* Al-Jawf Region */}
+        <motion.path
+          d="m13.437176,126.05041 0.66,-2.82 0.74,-0.76 -0.18,-0.82 1.04,-0.61 -0.48,-1.92 0.81,-0.46 -0.24,-0.86 0.61,-1.36 38.21,6.79 14.65,-12.07 8.85,-14.78 25.76,-5.16 5.78,-13.18 11.32,-6.78 -34.26,-39.72 33.69,-9.9z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.9 }}
+        />
+        
+        {/* Najran Region */}
+        <motion.path
+          d="m399.93718,569.40041 -17.23,-2.36 -6.25,-0.42 -6.25,-4.03 -19.73,0 -1.39,0.98 -1.95,0.27 -2.64,-1.39 -2.7,0.12 -8.79,1.12 -0.82,1.52 -1.08,-1.34 -2.95,0.53 -1.37,1.92 -2.61,-0.72 -1.6,0.43 -1.97,-0.29 -0.68,-0.89 -2.02,0.36 -2.59,-2.7 0.07,-1.04z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.0 }}
+        />
+        
+        {/* Jizan Region */}
+        <motion.path
+          d="m260.53718,593.84041 0.42,0.19 0.18,-0.09 0.34,0.26 -0.65,1.12 -0.68,-0.76 0.39,-0.72z m-0.48,-3.22 0.36,0.53 -0.42,1.5 -0.08,-0.96 -0.49,0.77 -0.56,-1.17 0.35,-0.56 0.84,-0.11z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.1 }}
+        />
+        
+        {/* Al-Bahah Region */}
+        <motion.path
+          d="m260.01718,447.12041 -2.15,6.42 0.23,0.79 2.05,1.97 0.11,1.59 -1.04,1.45 -5.82,3.97 -0.84,1.79 0.23,3.55 -4.26,8.69z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.2 }}
+        />
+      </g>
+
+      {/* Location markers */}
+      {locations.map((loc, i) => (
+        <g key={loc.id} className="cursor-pointer">
+          {/* Pulse ring for active */}
+          {activeRegion === loc.id && (
+            <>
+              <motion.circle
+                cx={loc.x}
+                cy={loc.y}
+                r="22"
+                fill="none"
+                stroke="#D4AF6A"
+                strokeWidth="3"
+                initial={{ scale: 0.8, opacity: 1 }}
+                animate={{ scale: 2.2, opacity: 0 }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              />
+              <motion.circle
+                cx={loc.x}
+                cy={loc.y}
+                r="22"
+                fill="none"
+                stroke="#D4AF6A"
+                strokeWidth="2"
+                initial={{ scale: 0.8, opacity: 0.8 }}
+                animate={{ scale: 2.8, opacity: 0 }}
+                transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
+              />
+            </>
+          )}
+          
+          {/* Outer glow */}
+          <motion.circle
+            cx={loc.x}
+            cy={loc.y}
+            r="20"
+            fill="#D4AF6A"
+            opacity={activeRegion === loc.id ? 0.35 : 0.2}
+            filter="url(#glow)"
+            initial={{ scale: 0 }}
+            animate={{ scale: activeRegion === loc.id ? 1.3 : 1 }}
+            transition={{ delay: i * 0.1, duration: 0.3 }}
+          />
+          
+          {/* Main dot with gradient */}
+          <motion.circle
+            cx={loc.x}
+            cy={loc.y}
+            r="14"
+            fill={activeRegion === loc.id ? '#D4AF6A' : '#243b5a'}
+            stroke="#D4AF6A"
+            strokeWidth="3"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            whileHover={{ scale: 1.2 }}
+            transition={{ delay: 0.5 + i * 0.1, type: 'spring', stiffness: 400 }}
+            onMouseEnter={() => setActiveRegion(loc.id)}
+            onMouseLeave={() => setActiveRegion(null)}
+            onClick={() => setActiveRegion(activeRegion === loc.id ? null : loc.id)}
+          />
+          
+          {/* Inner dot */}
+          <motion.circle
+            cx={loc.x}
+            cy={loc.y}
+            r="5"
+            fill={activeRegion === loc.id ? '#1e3a5f' : '#D4AF6A'}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.6 + i * 0.1 }}
+            className="pointer-events-none"
+          />
+          
+          {/* Label with background */}
+          <motion.g
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 + i * 0.1 }}
+            className="pointer-events-none"
+          >
+            <rect
+              x={loc.x - 50}
+              y={loc.y - 42}
+              width="100"
+              height="22"
+              rx="6"
+              fill={activeRegion === loc.id ? '#D4AF6A' : 'rgba(30, 58, 95, 0.95)'}
+              opacity={activeRegion === loc.id ? 1 : 0.9}
+            />
+            <text
+              x={loc.x}
+              y={loc.y - 26}
+              textAnchor="middle"
+              fill={activeRegion === loc.id ? '#1a2f4a' : 'white'}
+              fontSize="13"
+              fontWeight="600"
+              className="select-none"
+            >
+              {loc.name}
+            </text>
+          </motion.g>
+        </g>
+      ))}
+    </svg>
+  );
+}
+
 // ─── Service / Contact icon/gradient maps ─────────────────────────────────────
 const SERVICE_ICONS = [Package, Truck, ShieldCheck, Headphones];
 const SERVICE_GRADIENTS = ['from-slate-600 to-slate-800', 'from-emerald-600 to-emerald-800', 'from-teal-600 to-teal-800', 'from-slate-500 to-slate-700'];
@@ -202,6 +524,7 @@ const STAT_ICONS = [Building2, Users, Truck];
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function BonyaLanding() {
   const [lang, setLang] = useState<Lang>('en');
+  const [activeRegion, setActiveRegion] = useState<string | null>(null);
   const t = translations[lang];
   const isAr = lang === 'ar';
 
@@ -210,6 +533,8 @@ export default function BonyaLanding() {
   const heroImageY = useTransform(scrollYProgress, [0, 1], ['0%', '28%']);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
   const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
+
+  const activeRegionData = t.coverage.regions.find(r => r.id === activeRegion);
 
   return (
     <div className={`min-h-screen bg-stone-50 overflow-x-hidden`} dir={isAr ? 'rtl' : 'ltr'}>
@@ -369,50 +694,46 @@ export default function BonyaLanding() {
                 </motion.div>
               </div>
 
-              {/* Right – Stats Card */}
+              {/* Right - Stats Card */}
               <motion.div
-                className="hidden lg:block"
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.65, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                className="hidden lg:block relative"
+                initial={{ opacity: 0, x: 60, rotateY: -5 }}
+                animate={{ opacity: 1, x: 0, rotateY: 0 }}
+                transition={{ delay: 0.6, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               >
-                <div className="relative">
-                  <motion.div
-                    className="bg-white/7 backdrop-blur-2xl rounded-3xl p-9 border border-white/12 shadow-2xl shadow-slate-950/60"
-                    whileHover={{ y: -6 }}
-                    transition={{ type: 'spring', stiffness: 280 }}
-                  >
-                    <div className="flex items-start gap-5 mb-7">
-                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center shadow-lg shadow-emerald-500/30 flex-shrink-0">
-                        <Truck className="w-7 h-7 text-white" />
+                <div className="relative bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 p-8 shadow-2xl">
+                  <div className="absolute -top-3 -right-3 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl" />
+                  <div className="absolute -bottom-3 -left-3 w-32 h-32 bg-teal-500/8 rounded-full blur-2xl" />
+
+                  <div className="relative space-y-6">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                        <Truck className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <p className="text-5xl font-bold text-white mb-1 tabular-nums">5000+</p>
-                        <p className="text-stone-300 text-sm font-medium">{t.hero.deliveries}</p>
+                        <p className="text-white font-semibold">{t.hero.trust}</p>
                       </div>
                     </div>
-                    <div className="h-px bg-gradient-to-r from-transparent via-white/12 to-transparent mb-7" />
-                    <p className="text-stone-300 text-sm leading-relaxed mb-7">{t.hero.trust}</p>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-white/5 border border-white/8 rounded-2xl p-4">
-                        <p className="text-2xl font-bold text-emerald-300 mb-1">98%</p>
-                        <p className="text-xs text-stone-400">{t.hero.onTime}</p>
-                      </div>
-                      <div className="bg-white/5 border border-white/8 rounded-2xl p-4">
-                        <p className="text-2xl font-bold text-teal-300 mb-1">24/7</p>
-                        <p className="text-xs text-stone-400">{t.hero.support}</p>
-                      </div>
-                    </div>
-                  </motion.div>
 
-                  <motion.div
-                    className="absolute -top-5 -right-5 bg-gradient-to-br from-emerald-600 to-slate-800 rounded-2xl p-4 shadow-2xl border border-emerald-500/20"
-                    initial={{ scale: 0, rotate: -12 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    transition={{ delay: 1.3, type: 'spring', stiffness: 180 }}
-                  >
-                    <ShieldCheck className="w-8 h-8 text-emerald-300" />
-                  </motion.div>
+                    <div className="grid grid-cols-3 gap-4">
+                      {[
+                        { val: '500+', label: t.hero.deliveries },
+                        { val: '98%', label: t.hero.onTime },
+                        { val: '24/7', label: t.hero.support },
+                      ].map((stat, i) => (
+                        <motion.div
+                          key={stat.label}
+                          className="text-center p-4 rounded-xl bg-white/5 border border-white/8"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.8 + i * 0.1 }}
+                        >
+                          <p className="text-2xl font-bold text-white mb-1">{stat.val}</p>
+                          <p className="text-xs text-stone-400">{stat.label}</p>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -421,107 +742,113 @@ export default function BonyaLanding() {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.8 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/60"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 0.6 }}
         >
-          <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }} className="flex flex-col items-center gap-2">
-            <span className="text-white/35 text-[11px] font-medium tracking-widest uppercase">{t.hero.scroll}</span>
-            <div className="w-5 h-9 rounded-full border border-white/20 flex items-start justify-center pt-2">
-              <motion.div animate={{ y: [0, 12, 0] }} transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }} className="w-1 h-1.5 bg-white/40 rounded-full" />
-            </div>
+          <span className="text-xs tracking-wider uppercase">{t.hero.scroll}</span>
+          <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}>
+            <ChevronDown className="w-5 h-5" />
           </motion.div>
         </motion.div>
       </section>
 
-      {/* ── About ─────────────────────────────────────────────────────────────── */}
-      <section id="about" className="py-28 lg:py-36 bg-white relative overflow-hidden">
-        <div
-          className="absolute top-0 right-0 w-1/3 h-full opacity-[0.03] pointer-events-none"
-          style={{ backgroundImage: `radial-gradient(circle, #0D4B43 1px, transparent 0)`, backgroundSize: '32px 32px' }}
-        />
+      {/* ── About Section ─────────────────────────────────────────────────────── */}
+      <section id="about" className="py-24 relative overflow-hidden">
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-50 via-white to-emerald-50/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(13,75,67,0.08),transparent)]" />
+        
+        {/* Decorative gradient orbs */}
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-emerald-200/40 via-teal-100/30 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-amber-100/30 via-yellow-50/20 to-transparent rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+        <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-gradient-to-r from-emerald-50/20 via-transparent to-teal-50/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        
+        {/* Subtle mesh pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230D4B43' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <AnimatedSection>
-            <div className="text-center mb-20">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 text-emerald-700 text-xs font-semibold rounded-full mb-5 tracking-widest uppercase">
-                {t.about.tag}
-              </span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5 text-balance">{t.about.title}</h2>
-              <div className="w-16 h-px bg-gradient-to-r from-transparent via-emerald-600 to-transparent mx-auto mb-6" />
-              <p className="text-stone-500 text-lg max-w-2xl mx-auto leading-relaxed">{t.about.sub}</p>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Image side */}
             <AnimatedSection>
-              <div className="space-y-5">
-                <p className="text-slate-700 text-lg leading-relaxed">{t.about.p1}</p>
-                <p className="text-stone-600 leading-relaxed">{t.about.p2}</p>
-                <p className="text-stone-600 leading-relaxed">{t.about.p3}</p>
+              <div className="relative">
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                  <Image src="/hero-bg.jpg" alt="About BONYA" width={600} height={500} className="object-cover w-full h-[420px]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
+                </div>
+                {/* Floating stats */}
                 <motion.div
-                  className="inline-flex items-center gap-2 text-emerald-700 font-semibold cursor-pointer text-sm group pt-2"
-                  whileHover={{ x: isAr ? -5 : 5 }}
+                  className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-5 border border-stone-100"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
                 >
-                  {t.about.link}
-                  <ArrowRight className={`w-4 h-4 group-hover:translate-x-1 transition-transform ${isAr ? 'rotate-180' : ''}`} />
+                  <div className="flex items-center gap-4">
+                    {t.about.stats.map((stat, i) => {
+                      const Icon = STAT_ICONS[i];
+                      return (
+                        <div key={stat.l} className={`text-center ${i !== t.about.stats.length - 1 ? 'pr-4 border-r border-stone-200' : ''}`}>
+                          <div className="flex items-center justify-center gap-1 mb-1">
+                            <Icon className="w-4 h-4 text-emerald-600" />
+                            <span className="text-2xl font-bold text-slate-800">{stat.v}<span className="text-emerald-600">{stat.s}</span></span>
+                          </div>
+                          <p className="text-xs text-stone-500">{stat.l}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </motion.div>
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.15}>
-              <div className="grid grid-cols-3 gap-5">
-                {t.about.stats.map((stat, i) => {
-                  const Icon = STAT_ICONS[i];
-                  return (
-                    <motion.div
-                      key={stat.l}
-                      className="group relative bg-gradient-to-br from-slate-50 to-stone-100 rounded-2xl p-6 text-center border border-stone-200 hover:border-emerald-300 transition-all duration-300 hover:shadow-xl overflow-hidden"
-                      whileHover={{ y: -6 }}
-                      initial={{ opacity: 0, y: 24 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.1 }}
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/0 to-teal-600/0 group-hover:from-emerald-600/3 group-hover:to-teal-600/4 transition-all duration-500" />
-                      <div className="relative">
-                        <div className="w-11 h-11 mx-auto mb-4 rounded-xl bg-slate-100 border border-stone-200 flex items-center justify-center group-hover:bg-emerald-700 group-hover:border-emerald-700 transition-all duration-300">
-                          <Icon className="w-5 h-5 text-slate-500 group-hover:text-white transition-colors duration-300" />
-                        </div>
-                        <p className="text-3xl font-bold text-slate-800 mb-1">{stat.v}{stat.s}</p>
-                        <p className="text-xs text-stone-500 font-medium">{stat.l}</p>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </AnimatedSection>
+            {/* Content side */}
+            <div className="lg:pl-8">
+              <AnimatedSection>
+                <span className="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full uppercase tracking-wider mb-4">
+                  {t.about.tag}
+                </span>
+                <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">{t.about.title}</h2>
+                <p className="text-lg text-emerald-700 font-medium mb-6">{t.about.sub}</p>
+              </AnimatedSection>
+              
+              <AnimatedSection delay={0.1}>
+                <div className="space-y-4 text-stone-600 leading-relaxed mb-8">
+                  <p>{t.about.p1}</p>
+                  <p>{t.about.p2}</p>
+                  <p>{t.about.p3}</p>
+                </div>
+                <a href="#" className="inline-flex items-center gap-2 text-emerald-700 font-semibold hover:text-emerald-800 group">
+                  {t.about.link}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </AnimatedSection>
+            </div>
           </div>
 
-          {/* Service Cards */}
+          {/* Services Grid */}
           <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-20"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true }}
           >
             {t.about.services.map((service, i) => {
               const Icon = SERVICE_ICONS[i];
               return (
                 <motion.div
                   key={service.title}
-                  className="group relative bg-white rounded-2xl p-8 border border-stone-200 hover:border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden"
+                  className="group relative bg-white rounded-2xl p-6 border border-stone-100 hover:border-emerald-200 shadow-sm hover:shadow-xl transition-all duration-500"
                   variants={fadeInUp}
-                  whileHover={{ y: -8 }}
+                  whileHover={{ y: -6 }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-50/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className={`relative w-12 h-12 rounded-xl bg-gradient-to-br ${SERVICE_GRADIENTS[i]} flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${SERVICE_GRADIENTS[i]} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="relative text-lg font-bold text-slate-800 mb-3">{service.title}</h3>
-                  <p className="relative text-stone-500 text-sm leading-relaxed">{service.desc}</p>
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-500 via-teal-500 to-slate-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <h3 className="text-lg font-bold text-slate-800 mb-2">{service.title}</h3>
+                  <p className="text-sm text-stone-500 leading-relaxed">{service.desc}</p>
                 </motion.div>
               );
             })}
@@ -529,112 +856,229 @@ export default function BonyaLanding() {
         </div>
       </section>
 
-      {/* ── Portal ─────────────────────────────────────────────────────────────── */}
-      <section id="access-portal" className="py-28 lg:py-36 bg-gradient-to-b from-slate-50 to-stone-100 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-32 -right-32 w-72 h-72 bg-emerald-200/15 rounded-full blur-3xl" />
-          <div className="absolute -bottom-32 -left-32 w-72 h-72 bg-slate-300/15 rounded-full blur-3xl" />
-        </div>
-
+      {/* ── Coverage Map Section ──────────────────────────────────────────────────── */}
+      <section className="py-20 relative overflow-hidden">
+        {/* Multi-layer gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a2f4a] via-[#162847] to-[#0f1f35]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/20 via-transparent to-teal-950/10" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_50%_at_50%_0%,rgba(212,175,106,0.05),transparent)]" />
+        
+        {/* Decorative gradient orbs */}
+        <div className="absolute top-0 left-1/4 w-[500px] h-[300px] bg-gradient-to-b from-teal-800/15 via-emerald-900/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[250px] bg-gradient-to-t from-slate-700/15 via-blue-900/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-0 w-[300px] h-[400px] bg-gradient-to-r from-emerald-900/10 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        
+        {/* Subtle pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.035] pointer-events-none"
+          style={{
+            backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 0)`,
+            backgroundSize: '30px 30px',
+          }}
+        />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 text-emerald-700 text-xs font-semibold rounded-full mb-5 tracking-widest uppercase">
-                {t.portal.tag}
-              </span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5">{t.portal.title}</h2>
-              <div className="w-16 h-px bg-gradient-to-r from-transparent via-emerald-600 to-transparent mx-auto mb-6" />
-              <p className="text-stone-500 text-lg max-w-2xl mx-auto leading-relaxed">{t.portal.sub}</p>
-            </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Content */}
+            <AnimatedSection>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-[2px] bg-[#D4AF6A]" />
+                <span className="text-[#D4AF6A] text-xs font-semibold tracking-[0.2em] uppercase">
+                  {t.coverage.tag}
+                </span>
+              </div>
+              
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight font-serif italic">
+                {t.coverage.title}
+              </h2>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight font-serif italic">
+                {t.coverage.title2}
+              </h2>
+              
+              <p className="text-stone-400 text-lg leading-relaxed mb-10 max-w-lg">
+                {t.coverage.sub}
+              </p>
+
+              {/* Map */}
+              <div className="relative">
+                <SaudiMap 
+                  activeRegion={activeRegion} 
+                  setActiveRegion={setActiveRegion}
+                  regions={t.coverage.regions}
+                />
+              </div>
+            </AnimatedSection>
+
+            {/* Right - Info Card */}
+            <AnimatedSection delay={0.2}>
+              <div className="lg:pl-8">
+                <motion.div 
+                  className="bg-[#243b5a] rounded-2xl p-8 border border-[#2d4a6f] min-h-[200px]"
+                  layout
+                >
+                  <AnimatePresence mode="wait">
+                    {activeRegionData ? (
+                      <motion.div
+                        key={activeRegionData.id}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <h3 className="text-2xl font-bold text-[#D4AF6A] mb-4">
+                          {activeRegionData.title}
+                        </h3>
+                        <p className="text-stone-300 leading-relaxed text-lg">
+                          {activeRegionData.desc}
+                        </p>
+                      </motion.div>
+                    ) : (
+                      <motion.div
+                        key="hint"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="flex flex-col items-start justify-center h-full"
+                      >
+                        <p className="text-stone-500 uppercase tracking-wider text-sm">
+                          {t.coverage.hint}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+
+                {/* Region quick links */}
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {t.coverage.regions.map((region) => (
+                    <motion.button
+                      key={region.id}
+                      onClick={() => setActiveRegion(activeRegion === region.id ? null : region.id)}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        activeRegion === region.id
+                          ? 'bg-[#D4AF6A] text-[#1a2f4a]'
+                          : 'bg-[#243b5a] text-stone-400 hover:text-white hover:bg-[#2d4a6f]'
+                      }`}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      {region.name}
+                    </motion.button>
+                  ))}
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Access Portal ─────────────────────────────────────────────────────── */}
+      <section id="access-portal" className="py-24 relative overflow-hidden">
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-tl from-stone-100 via-white to-emerald-50/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_80%,rgba(13,75,67,0.06),transparent)]" />
+        
+        {/* Decorative gradient orbs */}
+        <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-bl from-teal-100/40 via-emerald-50/30 to-transparent rounded-full blur-3xl translate-x-1/3 -translate-y-1/3" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-slate-100/50 via-stone-50/30 to-transparent rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
+        <div className="absolute top-1/2 left-1/4 w-[300px] h-[300px] bg-gradient-to-r from-amber-50/20 to-transparent rounded-full blur-2xl" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <AnimatedSection className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full uppercase tracking-wider mb-4">
+              {t.portal.tag}
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">{t.portal.title}</h2>
+            <p className="text-lg text-stone-500 max-w-2xl mx-auto">{t.portal.sub}</p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Customer */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Customer Portal */}
             <motion.div
-              className="group relative bg-white rounded-3xl p-10 border border-stone-200 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="group relative bg-white rounded-3xl p-8 border border-stone-200 hover:border-emerald-300 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              whileHover={{ y: -6 }}
+              whileHover={{ y: -8 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-bl-full opacity-60 group-hover:opacity-100 transition-opacity" />
               <div className="relative">
-                <div className="flex items-center justify-between mb-7">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-600 to-slate-800 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform duration-300">
-                    <Users className="w-7 h-7 text-white" />
-                  </div>
-                  <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full tracking-widest uppercase">{t.portal.pathA}</span>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-xs font-semibold text-emerald-600 uppercase tracking-wider">{t.portal.pathA}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">{t.portal.cTitle}</h3>
-                <p className="text-stone-500 mb-9 leading-relaxed text-sm">{t.portal.cDesc}</p>
-                <div className="space-y-3">
-                  <Button className="w-full bg-gradient-to-r from-emerald-700 via-emerald-800 to-slate-800 hover:from-emerald-800 hover:to-slate-900 text-white font-semibold py-6 rounded-xl shadow-lg shadow-emerald-700/15 hover:shadow-xl transition-all duration-300 group/btn">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-700 flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-3">{t.portal.cTitle}</h3>
+                <p className="text-stone-500 mb-8 leading-relaxed">{t.portal.cDesc}</p>
+                <div className="flex gap-3">
+                  <Button className="flex-1 bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all">
                     {t.portal.cLogin}
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
-                  <Button variant="outline" className="w-full border-2 border-stone-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 font-semibold py-6 rounded-xl transition-all duration-300 text-sm">
+                  <Button variant="outline" className="flex-1 border-emerald-200 text-emerald-700 hover:bg-emerald-50 font-semibold rounded-xl">
                     {t.portal.cSignup}
                   </Button>
                 </div>
               </div>
             </motion.div>
 
-            {/* Partner */}
+            {/* Partner Portal */}
             <motion.div
-              className="group relative bg-white rounded-3xl p-10 border border-stone-200 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="group relative bg-white rounded-3xl p-8 border border-stone-200 hover:border-slate-400 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              whileHover={{ y: -6 }}
+              transition={{ delay: 0.1 }}
+              whileHover={{ y: -8 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-slate-50 to-stone-100 rounded-bl-full opacity-60 group-hover:opacity-100 transition-opacity" />
               <div className="relative">
-                <div className="flex items-center justify-between mb-7">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-600 to-slate-900 flex items-center justify-center shadow-lg shadow-slate-500/20 group-hover:scale-105 transition-transform duration-300">
-                    <Building2 className="w-7 h-7 text-white" />
-                  </div>
-                  <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full tracking-widest uppercase">{t.portal.pathB}</span>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">{t.portal.pathB}</span>
+                  <span className="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">{t.portal.note}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">{t.portal.pTitle}</h3>
-                <p className="text-stone-500 mb-9 leading-relaxed text-sm">{t.portal.pDesc}</p>
-                <div className="space-y-3">
-                  <Button className="w-full bg-gradient-to-r from-slate-700 via-slate-800 to-slate-900 hover:from-slate-800 hover:to-slate-950 text-white font-semibold py-6 rounded-xl shadow-lg shadow-slate-700/15 hover:shadow-xl transition-all duration-300 group/btn">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Building2 className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-3">{t.portal.pTitle}</h3>
+                <p className="text-stone-500 mb-8 leading-relaxed">{t.portal.pDesc}</p>
+                <div className="flex gap-3">
+                  <Button className="flex-1 bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-slate-950 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all">
                     {t.portal.pLogin}
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
-                  <Button variant="outline" className="w-full border-2 border-stone-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 font-semibold py-6 rounded-xl transition-all duration-300 text-sm">
+                  <Button variant="outline" className="flex-1 border-slate-300 text-slate-700 hover:bg-slate-50 font-semibold rounded-xl">
                     {t.portal.pSignup}
                   </Button>
                 </div>
-                <p className="text-center text-stone-400 text-xs mt-5">{t.portal.note}</p>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* ── Contact ─────────────────────────────────────────────────────────────── */}
-      <section id="contact" className="py-28 lg:py-36 bg-white relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{ backgroundImage: `radial-gradient(circle, #334155 1px, transparent 0)`, backgroundSize: '32px 32px' }}
-        />
+      {/* ── Contact ────────────────────────────────────────────────────────────── */}
+      <section id="contact" className="py-24 relative overflow-hidden">
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-stone-50/50 to-emerald-50/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_20%_100%,rgba(13,75,67,0.05),transparent)]" />
+        
+        {/* Decorative gradient orbs */}
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-emerald-100/40 via-teal-50/30 to-transparent rounded-full blur-3xl -translate-x-1/4 translate-y-1/4" />
+        <div className="absolute top-0 right-0 w-[350px] h-[350px] bg-gradient-to-bl from-amber-50/30 via-yellow-50/20 to-transparent rounded-full blur-3xl translate-x-1/4 -translate-y-1/4" />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 text-emerald-700 text-xs font-semibold rounded-full mb-5 tracking-widest uppercase">
-                {t.contact.tag}
-              </span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5">{t.contact.title}</h2>
-              <div className="w-16 h-px bg-gradient-to-r from-transparent via-emerald-600 to-transparent mx-auto mb-6" />
-              <p className="text-stone-500 text-lg max-w-2xl mx-auto leading-relaxed">{t.contact.sub}</p>
-            </div>
+          <AnimatedSection className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full uppercase tracking-wider mb-4">
+              {t.contact.tag}
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">{t.contact.title}</h2>
+            <p className="text-lg text-stone-500 max-w-2xl mx-auto">{t.contact.sub}</p>
           </AnimatedSection>
 
           <motion.div
-            className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+            className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -662,10 +1106,20 @@ export default function BonyaLanding() {
       </section>
 
       {/* ── Footer ────────────────────────────────────────────────────────────── */}
-      <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-white py-16 relative overflow-hidden">
+      <footer className="relative text-white py-16 overflow-hidden">
+        {/* Multi-layer gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-emerald-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-emerald-900/10" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_100%,rgba(13,75,67,0.15),transparent)]" />
+        
+        {/* Decorative gradient orbs */}
+        <div className="absolute bottom-0 left-1/4 w-[600px] h-[300px] bg-gradient-to-t from-emerald-800/20 via-teal-900/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 right-1/4 w-[400px] h-[200px] bg-gradient-to-b from-slate-700/20 via-slate-800/10 to-transparent rounded-full blur-3xl" />
+        
+        {/* Dot pattern overlay */}
         <div
-          className="absolute inset-0 opacity-[0.035] pointer-events-none"
-          style={{ backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 0)`, backgroundSize: '40px 40px' }}
+          className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          style={{ backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 0)`, backgroundSize: '40px 40px' }}
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid md:grid-cols-4 gap-12 mb-12 pb-12 border-b border-slate-800">
@@ -703,36 +1157,36 @@ export default function BonyaLanding() {
               <ul className="space-y-3 text-slate-400 text-sm">
                 <li className="flex items-center gap-2.5">
                   <Mail className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                  info@dealcom.com
+                  info@bonya.com
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Phone className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                  +1 (234) 567-890
+                  +966 920011074
                 </li>
               </ul>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
               <h4 className="font-semibold text-white text-sm mb-6 tracking-wide">{t.footer.newsletter}</h4>
-              <p className="text-slate-400 text-sm mb-4 leading-relaxed">{t.footer.nlSub}</p>
-              <div className="flex gap-2">
+              <p className="text-slate-400 text-sm mb-4">{t.footer.nlSub}</p>
+              <div className="flex">
                 <input
                   type="email"
                   placeholder={t.footer.nlPlaceholder}
-                  className="flex-1 bg-slate-800 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-emerald-500 transition-colors"
+                  className="flex-1 bg-slate-800 border border-slate-700 rounded-l-lg px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors"
                 />
-                <Button className="bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-slate-700 text-white font-semibold px-4 rounded-lg shadow-lg transition-all duration-300">
+                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-l-none rounded-r-lg px-4">
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
             </motion.div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-slate-500 text-sm">{t.footer.copyright}</p>
-            <div className="flex gap-6 text-sm">
-              <a href="#" className="text-slate-500 hover:text-white transition-colors">{t.footer.privacy}</a>
-              <a href="#" className="text-slate-500 hover:text-white transition-colors">{t.footer.terms}</a>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+            <p>{t.footer.copyright}</p>
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-white transition-colors">{t.footer.privacy}</a>
+              <a href="#" className="hover:text-white transition-colors">{t.footer.terms}</a>
             </div>
           </div>
         </div>
