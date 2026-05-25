@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Playfair_Display, Noto_Sans_Arabic } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const _playfair = Playfair_Display({ 
+  subsets: ["latin"],
+  style: ['normal', 'italic'],
+  weight: ['400', '500', '600', '700'],
+});
+const _notoArabic = Noto_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ['400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
-  title: 'BONYA - Premium Construction Materials & Logistics',
-  description: 'Your trusted partner in construction materials and logistics. Delivering excellence, quality, and reliability to every project.',
+  title: 'BONYA - Premium Construction Materials & Logistics | Saudi Arabia',
+  description: 'Leading Saudi construction materials supplier since 2019. Premium building materials, reliable logistics, and sustainable solutions for a stronger future.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -35,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-stone-50">
-      <body className="font-sans antialiased bg-stone-50">
+    <html lang="en" className="bg-white">
+      <body className="font-sans antialiased bg-white">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

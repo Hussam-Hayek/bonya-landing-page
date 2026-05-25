@@ -18,32 +18,59 @@ import {
   ArrowRight,
   Globe,
   ChevronDown,
+  Play,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 // ─── Translations ─────────────────────────────────────────────────────────────
 const translations = {
   en: {
-    nav: { about: 'About', portal: 'Access Portal', contact: 'Contact', cta: 'Get Started' },
+    topBar: { phone: '920011074', email: 'info@bonya.com' },
+    nav: { home: 'Home', about: 'About Us', services: 'Services', portal: 'Portal', contact: 'Contact Us', cta: 'Request a Quote' },
     hero: {
-      badge: 'Industry Leader in Construction & Logistics',
-      h1: 'Building', h2: "Tomorrow's", h3: 'Infrastructure',
-      sub: 'Your trusted partner in construction materials and logistics. Delivering excellence, quality, and reliability to every project.',
-      features: ['Premium Quality Materials', 'On-Time Delivery Guarantee', 'Expert Technical Support'],
-      cta1: 'Get Started Today', cta2: 'Learn More',
-      scroll: 'Scroll to explore',
-      deliveries: 'Deliveries Monthly', onTime: 'On-Time Rate', support: 'Support',
-      trust: 'Trusted by contractors, suppliers, and vendors across the region.',
+      badge: 'BONYA · SAUDI ARABIA · SINCE 2019',
+      h1: 'Sustainable Solutions',
+      h2: 'For a Stronger Future',
+      sub: 'We provide our clients within the Kingdom with durable building materials and personalized services, all while harnessing our global expertise to support even the most intricate projects with top-tier construction products.',
+      cta1: 'Request a Quote', cta2: 'Watch Our Story',
+      scroll: 'SCROLL',
+      global: 'WE THINK GLOBAL. WE ACT LOCAL.',
     },
+    stats: [
+      { value: '8', suffix: '+', label: 'SOURCES' },
+      { value: '300', suffix: '+', label: 'DELIVERIES' },
+      { value: '100', suffix: '+', label: 'CUSTOMERS' },
+      { value: '150', suffix: '+', label: 'PROJECTS' },
+      { value: '5', suffix: '', label: 'REGIONS' },
+    ],
     about: {
-      tag: 'Who We Are', title: 'About BONYA Company',
-      sub: 'A legacy of excellence in construction materials and logistics, built on trust, quality, and unwavering commitment.',
-      p1: 'BONYA Company is a leading provider of premium construction materials and logistics solutions, serving the construction industry with unwavering commitment to quality and excellence.',
-      p2: "With decades of experience, we've built our reputation on quality, reliability, and innovation. Our state-of-the-art facilities and modern fleet ensure every delivery meets the highest standards.",
-      p3: "Our mission is to be the most trusted partner in the industry — delivering not just products, but solutions that build tomorrow's infrastructure.",
-      link: 'Learn more about our story',
-      stats: [{ v: 25, s: '+', l: 'Years Experience' }, { v: 500, s: '+', l: 'Active Clients' }, { v: 50, s: '+', l: 'Fleet Vehicles' }],
-      services: [
+      tag: 'WHO WE ARE',
+      title: 'A leading Saudi construction materials supplier — since 2019.',
+      p1: 'BONYA is a leading Saudi-based construction materials supplier and logistics provider. We have been in business since 2019 with a strong track record of providing our clients with high-quality products and excellent service.',
+      p2: 'Equipped with a team of experienced engineers, technical experts and sales personnel, BONYA provides its clients with the right products for a future where societies can thrive.',
+      p3: 'We work with a network of trusted suppliers around the world to source the best possible building products — to fulfill the needs of our clients in both public and private sectors.',
+      link: 'More about us',
+    },
+    vision: {
+      num: '01',
+      title: 'Vision',
+      desc: 'To emerge as a major player in the Construction Materials segment, distinguished by our fast services and commitment to excellence in practices and values that foster human potential.',
+    },
+    mission: {
+      num: '02',
+      title: 'Mission',
+      desc: 'Is to supply all types of construction materials to ready-mix factories and projects across KSA. We also aim to deliver state-of-the-art technical solutions to our customers on scientific foundations — to advance the building materials sector.',
+    },
+    aligned: {
+      tag: 'ALIGNED WITH VISION 2030',
+      title: "Building the Kingdom's Vision 2030.",
+      sub: 'BONYA is built to serve the projects shaping the next chapter of Saudi Arabia — with the products, logistics, and quality discipline these projects demand.',
+    },
+    services: {
+      tag: 'What We Offer',
+      title: 'Our Services',
+      sub: 'Comprehensive solutions for all your construction material needs.',
+      items: [
         { title: 'Premium Materials', desc: 'High-quality cement, concrete, and aggregates sourced from trusted suppliers.' },
         { title: 'Reliable Logistics', desc: 'Modern fleet ensuring timely, safe delivery to every construction site.' },
         { title: 'Quality Assured', desc: 'Rigorous testing and quality control for premium products every time.' },
@@ -51,49 +78,91 @@ const translations = {
       ],
     },
     portal: {
-      tag: 'Portals', title: 'Access Your Portal',
+      tag: 'Access Portals',
+      title: 'Access Your Portal',
       sub: "Choose your portal to login or register. Whether you're a customer or a partner, we've got you covered.",
-      cTitle: 'Customer Portal', cDesc: 'Browse our catalog, place orders for construction materials, track deliveries, and manage your account.',
-      cLogin: 'Customer Login', cSignup: 'Customer Signup', pathA: 'Path A',
-      pTitle: 'Partners Portal', pDesc: 'For Brokers & Vendors: Manage your partnerships, inventory, commissions, and business opportunities.',
-      pLogin: 'Partner Login', pSignup: 'Partner Registration', pathB: 'Path B',
+      cTitle: 'Customer Portal',
+      cDesc: 'Browse our catalog, place orders for construction materials, track deliveries, and manage your account.',
+      cLogin: 'Customer Login',
+      cSignup: 'Customer Signup',
+      pathA: 'PATH A',
+      pTitle: 'Partners Portal',
+      pDesc: 'For Brokers & Vendors: Manage your partnerships, inventory, commissions, and business opportunities.',
+      pLogin: 'Partner Login',
+      pSignup: 'Partner Registration',
+      pathB: 'PATH B',
       note: 'For Brokers & Vendors',
     },
     contact: {
-      tag: 'Get in Touch', title: 'Contact Us',
+      tag: 'Get in Touch',
+      title: 'Contact Us',
       sub: 'Get in touch with our team for inquiries, support, or partnership opportunities.',
-      cards: [{ title: 'Email Address', val: 'info@dealcom.com' }, { title: 'Phone Number', val: '+1 (234) 567-890' }, { title: 'Office Location', val: 'Visit us during business hours' }],
+      cards: [
+        { title: 'Email Address', val: 'info@bonya.com' },
+        { title: 'Phone Number', val: '+966 920011074' },
+        { title: 'Office Location', val: 'Riyadh, Saudi Arabia' },
+      ],
     },
     footer: {
       tagline: 'Leading provider of premium construction materials and logistics solutions, building the infrastructure of tomorrow.',
-      quick: 'Quick Links', links: ['About Us', 'Access Portal', 'Contact'],
-      contactTitle: 'Contact Info', newsletter: 'Newsletter',
+      quick: 'Quick Links',
+      links: ['About Us', 'Services', 'Portal', 'Contact'],
+      contactTitle: 'Contact Info',
+      newsletter: 'Newsletter',
       nlSub: 'Stay updated with our latest news and offers.',
-      nlPlaceholder: 'Your email', copyright: '© 2026 BONYA Company. All rights reserved.',
-      privacy: 'Privacy Policy', terms: 'Terms of Service',
+      nlPlaceholder: 'Your email',
+      copyright: '© 2026 BONYA Company. All rights reserved.',
+      privacy: 'Privacy Policy',
+      terms: 'Terms of Service',
     },
   },
   ar: {
-    nav: { about: 'من نحن', portal: 'بوابة الدخول', contact: 'اتصل بنا', cta: 'ابدأ الآن' },
+    topBar: { phone: '920011074', email: 'info@bonya.com' },
+    nav: { home: 'الرئيسية', about: 'من نحن', services: 'خدماتنا', portal: 'البوابة', contact: 'اتصل بنا', cta: 'طلب عرض سعر' },
     hero: {
-      badge: 'رائد الصناعة في مواد البناء واللوجستيات',
-      h1: 'بناء', h2: 'البنية التحتية', h3: 'لغدٍ أفضل',
-      sub: 'شريكك الموثوق في مواد البناء والخدمات اللوجستية. نقدم التميز والجودة والموثوقية لكل مشروع.',
-      features: ['مواد بناء عالية الجودة', 'ضمان التسليم في الوقت المحدد', 'دعم فني متخصص'],
-      cta1: 'ابدأ اليوم', cta2: 'اعرف المزيد',
+      badge: 'بونيا · المملكة العربية السعودية · منذ 2019',
+      h1: 'حلول مستدامة',
+      h2: 'لمستقبل أقوى',
+      sub: 'نقدم لعملائنا في المملكة مواد بناء متينة وخدمات مخصصة، مع تسخير خبرتنا العالمية لدعم حتى أكثر المشاريع تعقيداً بمنتجات البناء عالية الجودة.',
+      cta1: 'طلب عرض سعر', cta2: 'شاهد قصتنا',
       scroll: 'انتقل للأسفل',
-      deliveries: 'شحنة شهرياً', onTime: 'معدل الالتزام', support: 'دعم متواصل',
-      trust: 'موثوق به من قبل المقاولين والموردين في المنطقة.',
+      global: 'نفكر عالمياً. نعمل محلياً.',
     },
+    stats: [
+      { value: '8', suffix: '+', label: 'مصادر' },
+      { value: '300', suffix: '+', label: 'شحنة' },
+      { value: '100', suffix: '+', label: 'عميل' },
+      { value: '150', suffix: '+', label: 'مشروع' },
+      { value: '5', suffix: '', label: 'مناطق' },
+    ],
     about: {
-      tag: 'من نحن', title: 'شركة بونيا',
-      sub: 'إرث من التميز في مواد البناء والخدمات اللوجستية، مبني على الثقة والجودة.',
-      p1: 'شركة بونيا مزود رائد لمواد البناء الفاخرة والحلول اللوجستية، تخدم قطاع البناء بالتزام راسخ بالجودة والتميز.',
-      p2: 'بخبرة عقود، بنينا سمعتنا على الجودة والموثوقية والابتكار. تضمن منشآتنا الحديثة وأسطولنا المتطور أن كل شحنة تلتزم بأعلى المعايير.',
-      p3: 'مهمتنا أن نكون الشريك الأكثر موثوقية في صناعة مواد البناء والخدمات اللوجستية.',
-      link: 'اعرف المزيد عن قصتنا',
-      stats: [{ v: 25, s: '+', l: 'سنوات خبرة' }, { v: 500, s: '+', l: 'عميل نشط' }, { v: 50, s: '+', l: 'مركبة' }],
-      services: [
+      tag: 'من نحن',
+      title: 'مورد رائد لمواد البناء في السعودية — منذ 2019.',
+      p1: 'بونيا مورد رائد لمواد البناء والخدمات اللوجستية في المملكة العربية السعودية. نعمل منذ 2019 بسجل حافل في تقديم منتجات عالية الجودة وخدمة متميزة.',
+      p2: 'بفريق من المهندسين والخبراء الفنيين ومسؤولي المبيعات، نقدم لعملائنا المنتجات المناسبة لمستقبل تزدهر فيه المجتمعات.',
+      p3: 'نعمل مع شبكة من الموردين الموثوقين حول العالم للحصول على أفضل منتجات البناء — لتلبية احتياجات عملائنا في القطاعين العام والخاص.',
+      link: 'المزيد عنا',
+    },
+    vision: {
+      num: '01',
+      title: 'الرؤية',
+      desc: 'أن نكون لاعباً رئيسياً في قطاع مواد البناء، متميزين بخدماتنا السريعة والتزامنا بالتميز في الممارسات والقيم التي تعزز الإمكانات البشرية.',
+    },
+    mission: {
+      num: '02',
+      title: 'المهمة',
+      desc: 'توريد جميع أنواع مواد البناء لمصانع الخرسانة الجاهزة والمشاريع في المملكة. نهدف أيضاً لتقديم حلول تقنية متطورة لعملائنا على أسس علمية — للنهوض بقطاع مواد البناء.',
+    },
+    aligned: {
+      tag: 'متوافقون مع رؤية 2030',
+      title: 'نبني رؤية المملكة 2030.',
+      sub: 'بونيا مبنية لخدمة المشاريع التي تشكل الفصل القادم من تاريخ المملكة — بالمنتجات واللوجستيات وانضباط الجودة الذي تتطلبه هذه المشاريع.',
+    },
+    services: {
+      tag: 'ما نقدمه',
+      title: 'خدماتنا',
+      sub: 'حلول شاملة لجميع احتياجاتك من مواد البناء.',
+      items: [
         { title: 'مواد متميزة', desc: 'إسمنت وخرسانة وركام عالي الجودة من موردين موثوقين.' },
         { title: 'لوجستيات موثوقة', desc: 'أسطول حديث يضمن التسليم الآمن في الوقت المناسب.' },
         { title: 'جودة مضمونة', desc: 'اختبارات صارمة وضبط جودة لمنتجات متميزة في كل مرة.' },
@@ -101,26 +170,42 @@ const translations = {
       ],
     },
     portal: {
-      tag: 'البوابات', title: 'ادخل إلى بوابتك',
+      tag: 'بوابات الدخول',
+      title: 'ادخل إلى بوابتك',
       sub: 'اختر بوابتك لتسجيل الدخول أو التسجيل، سواء كنت عميلاً أو شريكاً.',
-      cTitle: 'بوابة العملاء', cDesc: 'تصفح كتالوجنا وقدم الطلبات وتابع الشحنات وأدر حسابك.',
-      cLogin: 'دخول العملاء', cSignup: 'تسجيل عميل', pathA: 'مسار أ',
-      pTitle: 'بوابة الشركاء', pDesc: 'للوسطاء والموردين: أدر شراكاتك ومخزونك وعمولاتك وفرصك التجارية.',
-      pLogin: 'دخول الشركاء', pSignup: 'تسجيل شريك', pathB: 'مسار ب',
+      cTitle: 'بوابة العملاء',
+      cDesc: 'تصفح كتالوجنا وقدم الطلبات وتابع الشحنات وأدر حسابك.',
+      cLogin: 'دخول العملاء',
+      cSignup: 'تسجيل عميل',
+      pathA: 'مسار أ',
+      pTitle: 'بوابة الشركاء',
+      pDesc: 'للوسطاء والموردين: أدر شراكاتك ومخزونك وعمولاتك وفرصك التجارية.',
+      pLogin: 'دخول الشركاء',
+      pSignup: 'تسجيل شريك',
+      pathB: 'مسار ب',
       note: 'للوسطاء والموردين',
     },
     contact: {
-      tag: 'تواصل معنا', title: 'اتصل بنا',
+      tag: 'تواصل معنا',
+      title: 'اتصل بنا',
       sub: 'تواصل مع فريقنا للاستفسارات والدعم وفرص الشراكة.',
-      cards: [{ title: 'البريد الإلكتروني', val: 'info@dealcom.com' }, { title: 'رقم الهاتف', val: '+1 (234) 567-890' }, { title: 'موقع المكتب', val: 'زورنا خلال ساعات العمل' }],
+      cards: [
+        { title: 'البريد الإلكتروني', val: 'info@bonya.com' },
+        { title: 'رقم الهاتف', val: '+966 920011074' },
+        { title: 'موقع المكتب', val: 'الرياض، المملكة العربية السعودية' },
+      ],
     },
     footer: {
       tagline: 'مزود رائد لمواد البناء الفاخرة والحلول اللوجستية، نبني البنية التحتية لغد أفضل.',
-      quick: 'روابط سريعة', links: ['من نحن', 'بوابة الدخول', 'اتصل بنا'],
-      contactTitle: 'معلومات الاتصال', newsletter: 'النشرة الإخبارية',
+      quick: 'روابط سريعة',
+      links: ['من نحن', 'خدماتنا', 'البوابة', 'اتصل بنا'],
+      contactTitle: 'معلومات الاتصال',
+      newsletter: 'النشرة الإخبارية',
       nlSub: 'ابق على اطلاع بآخر أخبارنا وعروضنا.',
-      nlPlaceholder: 'بريدك الإلكتروني', copyright: '© 2026 شركة بونيا. جميع الحقوق محفوظة.',
-      privacy: 'سياسة الخصوصية', terms: 'شروط الخدمة',
+      nlPlaceholder: 'بريدك الإلكتروني',
+      copyright: '© 2026 شركة بونيا. جميع الحقوق محفوظة.',
+      privacy: 'سياسة الخصوصية',
+      terms: 'شروط الخدمة',
     },
   },
 } as const;
@@ -129,7 +214,6 @@ type Lang = 'en' | 'ar';
 
 // ─── Animation Variants ───────────────────────────────────────────────────────
 const fadeInUp = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } };
-const fadeInLeft = { hidden: { opacity: 0, x: -40 }, visible: { opacity: 1, x: 0 } };
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -147,57 +231,65 @@ function AnimatedSection({ children, className = '', delay = 0 }: { children: Re
   );
 }
 
+// ─── Animated Counter ─────────────────────────────────────────────────────────
+function AnimatedCounter({ value, suffix }: { value: string; suffix: string }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const numValue = parseInt(value);
+
+  return (
+    <span ref={ref} className="tabular-nums">
+      {isInView ? (
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            {suffix && <span className="text-[#1e3a5f]">+</span>}
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              {numValue}
+            </motion.span>
+          </motion.span>
+        </motion.span>
+      ) : (
+        <span>0</span>
+      )}
+    </span>
+  );
+}
+
 // ─── Language Toggle ──────────────────────────────────────────────────────────
 function LanguageToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void }) {
-  const [open, setOpen] = useState(false);
   return (
-    <div className="relative">
-      <motion.button
-        onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg border border-stone-200 bg-white/80 hover:bg-stone-50 text-stone-600 text-sm font-medium transition-colors duration-200"
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.97 }}
-      >
-        <Globe className="w-4 h-4 text-emerald-700" />
-        <span className="font-semibold">{lang === 'en' ? 'EN' : 'AR'}</span>
-        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }}>
-          <ChevronDown className="w-3 h-3 text-stone-400" />
-        </motion.span>
-      </motion.button>
-
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, y: -8, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -8, scale: 0.95 }}
-            transition={{ duration: 0.15 }}
-            className="absolute top-full mt-2 right-0 bg-white border border-stone-200 rounded-xl shadow-2xl overflow-hidden z-50 w-36"
-          >
-            {(['en', 'ar'] as Lang[]).map((l) => (
-              <button
-                key={l}
-                onClick={() => { setLang(l); setOpen(false); }}
-                className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors duration-150 ${lang === l ? 'bg-emerald-50 text-emerald-700' : 'text-stone-600 hover:bg-stone-50'}`}
-              >
-                <span>{l === 'en' ? '🇬🇧' : '🇸🇦'}</span>
-                {l === 'en' ? 'English' : 'العربية'}
-                {lang === l && <CheckCircle2 className="w-3.5 h-3.5 ml-auto text-emerald-600" />}
-              </button>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <div className="flex items-center bg-slate-100 rounded-full p-0.5">
+      {(['en', 'ar'] as Lang[]).map((l) => (
+        <button
+          key={l}
+          onClick={() => setLang(l)}
+          className={`px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 ${
+            lang === l
+              ? 'bg-white text-[#1e3a5f] shadow-sm'
+              : 'text-slate-500 hover:text-slate-700'
+          }`}
+        >
+          {l.toUpperCase()}
+        </button>
+      ))}
     </div>
   );
 }
 
 // ─── Service / Contact icon/gradient maps ─────────────────────────────────────
 const SERVICE_ICONS = [Package, Truck, ShieldCheck, Headphones];
-const SERVICE_GRADIENTS = ['from-slate-600 to-slate-800', 'from-emerald-600 to-emerald-800', 'from-teal-600 to-teal-800', 'from-slate-500 to-slate-700'];
 const CONTACT_ICONS = [Mail, Phone, MapPin];
-const CONTACT_GRADIENTS = ['from-slate-600 to-slate-800', 'from-emerald-600 to-emerald-800', 'from-teal-600 to-teal-800'];
-const STAT_ICONS = [Building2, Users, Truck];
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function BonyaLanding() {
@@ -207,56 +299,74 @@ export default function BonyaLanding() {
 
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] });
-  const heroImageY = useTransform(scrollYProgress, [0, 1], ['0%', '28%']);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
   const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
 
   return (
-    <div className={`min-h-screen bg-stone-50 overflow-x-hidden`} dir={isAr ? 'rtl' : 'ltr'}>
+    <div className={`min-h-screen bg-white overflow-x-hidden`} dir={isAr ? 'rtl' : 'ltr'}>
+
+      {/* ── Top Bar ────────────────────────────────────────────────────────────── */}
+      <div className="bg-slate-50 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center text-sm">
+          <div className="flex items-center gap-6 text-slate-600">
+            <a href="tel:920011074" className="flex items-center gap-2 hover:text-[#1e3a5f] transition-colors">
+              <Phone className="w-3.5 h-3.5" />
+              <span>{t.topBar.phone}</span>
+            </a>
+            <a href="mailto:info@bonya.com" className="hidden sm:flex items-center gap-2 hover:text-[#1e3a5f] transition-colors">
+              <Mail className="w-3.5 h-3.5" />
+              <span>{t.topBar.email}</span>
+            </a>
+          </div>
+          <LanguageToggle lang={lang} setLang={setLang} />
+        </div>
+      </div>
 
       {/* ── Navbar ───────────────────────────────────────────────────────────── */}
       <motion.header
-        initial={{ y: -80, opacity: 0 }}
+        initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed w-full top-0 z-50 bg-white/88 backdrop-blur-2xl border-b border-stone-200/70 shadow-sm"
+        transition={{ duration: 0.5 }}
+        className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center gap-4">
           {/* Logo */}
           <motion.div className="flex items-center gap-3 cursor-pointer flex-shrink-0" whileHover={{ scale: 1.02 }} transition={{ type: 'spring', stiffness: 400 }}>
-            <div className="w-9 h-9 bg-gradient-to-br from-emerald-700 to-slate-800 rounded-lg shadow-md flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-sm tracking-tight">B</span>
+            <div className="w-10 h-10 bg-[#1e3a5f] rounded-lg flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-lg">B</span>
             </div>
             <div className="flex flex-col leading-none">
-              <span className="font-bold text-lg tracking-tight text-slate-900">BONYA</span>
-              <span className="text-[9px] text-stone-400 tracking-[0.2em] uppercase">Company</span>
+              <span className="font-bold text-xl tracking-tight text-[#1e3a5f]">BONYA</span>
+              <span className="text-[9px] text-slate-400 tracking-[0.15em] uppercase">Company</span>
             </div>
           </motion.div>
 
           {/* Nav Links */}
-          <nav className="hidden md:flex items-center gap-1 flex-1 justify-center">
+          <nav className="hidden lg:flex items-center gap-8">
             {[
+              { label: t.nav.home, href: '#' },
               { label: t.nav.about, href: '#about' },
+              { label: t.nav.services, href: '#services' },
               { label: t.nav.portal, href: '#access-portal' },
               { label: t.nav.contact, href: '#contact' },
             ].map((item, i) => (
               <motion.a
                 key={item.label}
                 href={item.href}
-                className="px-4 py-2 text-sm font-medium text-stone-600 hover:text-emerald-800 transition-colors rounded-lg hover:bg-stone-100"
-                initial={{ opacity: 0, y: -16 }}
+                className="relative text-sm font-medium text-slate-600 hover:text-[#1e3a5f] transition-colors py-2 group"
+                initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.08 * i + 0.25 }}
+                transition={{ delay: 0.05 * i + 0.2 }}
               >
                 {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1e3a5f] group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
           </nav>
 
-          {/* Right */}
-          <motion.div className="flex items-center gap-3 flex-shrink-0" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }}>
-            <LanguageToggle lang={lang} setLang={setLang} />
-            <Button className="hidden sm:flex bg-gradient-to-r from-emerald-700 via-emerald-800 to-slate-800 hover:from-emerald-800 hover:to-slate-900 text-white font-semibold px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm">
+          {/* CTA Button */}
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }}>
+            <Button className="hidden sm:flex bg-[#c9a96a] hover:bg-[#b8985d] text-white font-medium px-6 py-5 rounded-lg transition-all duration-300 text-sm">
               {t.nav.cta}
             </Button>
           </motion.div>
@@ -264,9 +374,9 @@ export default function BonyaLanding() {
       </motion.header>
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Parallax Background */}
-        <motion.div className="absolute inset-0" style={{ y: heroImageY, scale: heroScale }}>
+      <section ref={heroRef} className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Background Video/Image */}
+        <motion.div className="absolute inset-0" style={{ scale: heroScale }}>
           <Image
             src="/hero-bg.jpg"
             alt="BONYA Construction Facility"
@@ -274,231 +384,229 @@ export default function BonyaLanding() {
             className="object-cover"
             priority
           />
-          {/* Cinematic overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/93 via-slate-900/72 to-slate-800/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-transparent to-slate-900/20" />
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/25 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a5f]/90 via-[#1e3a5f]/70 to-[#1e3a5f]/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/50 via-transparent to-transparent" />
         </motion.div>
 
-        {/* Subtle grid texture */}
-        <div
-          className="absolute inset-0 opacity-[0.035] pointer-events-none"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)`,
-            backgroundSize: '72px 72px',
-          }}
-        />
-
         <motion.div style={{ opacity: heroOpacity }} className="relative z-10 w-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 lg:pt-40 lg:pb-28">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-              {/* Left */}
-              <div className="text-white">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.6 }}
-                  className="inline-flex items-center gap-2.5 mb-9"
-                >
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
-                  </span>
-                  <span className="bg-white/8 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/12 text-sm font-medium text-stone-200 tracking-wide">
-                    {t.hero.badge}
-                  </span>
-                </motion.div>
-
-                <motion.h1
-                  className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] mb-8 text-balance"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  {t.hero.h1}
-                  <br />
-                  <span className="relative inline-block">
-                    {t.hero.h2}
-                    <motion.span
-                      className="absolute -bottom-1 left-0 h-[3px] bg-gradient-to-r from-emerald-400 via-teal-400 to-transparent rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: '100%' }}
-                      transition={{ delay: 1.1, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                    />
-                  </span>
-                  <br />
-                  <span className="bg-gradient-to-r from-emerald-300 via-teal-300 to-slate-200 bg-clip-text text-transparent">
-                    {t.hero.h3}
-                  </span>
-                </motion.h1>
-
-                <motion.p
-                  className="text-lg lg:text-xl text-stone-300 mb-10 leading-relaxed max-w-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.6 }}
-                >
-                  {t.hero.sub}
-                </motion.p>
-
-                <motion.div className="space-y-3.5 mb-11" variants={staggerContainer} initial="hidden" animate="visible">
-                  {t.hero.features.map((feature, i) => (
-                    <motion.div key={feature} className="flex items-center gap-3" variants={fadeInLeft} transition={{ delay: 0.6 + i * 0.1 }}>
-                      <div className="w-5 h-5 rounded-full bg-emerald-500/15 border border-emerald-400/25 flex items-center justify-center flex-shrink-0">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                      </div>
-                      <span className="text-stone-200 text-sm font-medium">{feature}</span>
-                    </motion.div>
-                  ))}
-                </motion.div>
-
-                <motion.div
-                  className="flex flex-wrap gap-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.9, duration: 0.6 }}
-                >
-                  <Button className="group bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-700 hover:from-emerald-600 hover:to-slate-700 text-white font-semibold px-8 py-6 text-base rounded-xl shadow-lg shadow-emerald-600/25 hover:shadow-xl transition-all duration-300 border border-emerald-400/15">
-                    {t.hero.cta1}
-                    <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                  <Button variant="outline" className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 hover:border-white/30 font-semibold px-8 py-6 text-base rounded-xl transition-all duration-300">
-                    {t.hero.cta2}
-                  </Button>
-                </motion.div>
-              </div>
-
-              {/* Right – Stats Card */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+            <div className="max-w-3xl">
+              {/* Badge */}
               <motion.div
-                className="hidden lg:block"
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.65, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="inline-flex items-center gap-2.5 mb-8"
               >
-                <div className="relative">
-                  <motion.div
-                    className="bg-white/7 backdrop-blur-2xl rounded-3xl p-9 border border-white/12 shadow-2xl shadow-slate-950/60"
-                    whileHover={{ y: -6 }}
-                    transition={{ type: 'spring', stiffness: 280 }}
-                  >
-                    <div className="flex items-start gap-5 mb-7">
-                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center shadow-lg shadow-emerald-500/30 flex-shrink-0">
-                        <Truck className="w-7 h-7 text-white" />
-                      </div>
-                      <div>
-                        <p className="text-5xl font-bold text-white mb-1 tabular-nums">5000+</p>
-                        <p className="text-stone-300 text-sm font-medium">{t.hero.deliveries}</p>
-                      </div>
-                    </div>
-                    <div className="h-px bg-gradient-to-r from-transparent via-white/12 to-transparent mb-7" />
-                    <p className="text-stone-300 text-sm leading-relaxed mb-7">{t.hero.trust}</p>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-white/5 border border-white/8 rounded-2xl p-4">
-                        <p className="text-2xl font-bold text-emerald-300 mb-1">98%</p>
-                        <p className="text-xs text-stone-400">{t.hero.onTime}</p>
-                      </div>
-                      <div className="bg-white/5 border border-white/8 rounded-2xl p-4">
-                        <p className="text-2xl font-bold text-teal-300 mb-1">24/7</p>
-                        <p className="text-xs text-stone-400">{t.hero.support}</p>
-                      </div>
-                    </div>
-                  </motion.div>
+                <span className="w-2 h-2 rounded-full bg-[#c9a96a]" />
+                <span className="text-white/80 text-sm font-medium tracking-[0.2em] uppercase">
+                  {t.hero.badge}
+                </span>
+              </motion.div>
 
-                  <motion.div
-                    className="absolute -top-5 -right-5 bg-gradient-to-br from-emerald-600 to-slate-800 rounded-2xl p-4 shadow-2xl border border-emerald-500/20"
-                    initial={{ scale: 0, rotate: -12 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    transition={{ delay: 1.3, type: 'spring', stiffness: 180 }}
-                  >
-                    <ShieldCheck className="w-8 h-8 text-emerald-300" />
-                  </motion.div>
-                </div>
+              {/* Headline */}
+              <motion.h1
+                className="text-5xl sm:text-6xl lg:text-7xl font-serif italic font-normal leading-[1.1] mb-8 text-white"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              >
+                {t.hero.h1}
+                <br />
+                <span className="text-white">{t.hero.h2}</span>
+              </motion.h1>
+
+              {/* Description */}
+              <motion.p
+                className="text-lg text-white/75 mb-10 leading-relaxed max-w-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+              >
+                {t.hero.sub}
+              </motion.p>
+
+              {/* CTAs */}
+              <motion.div
+                className="flex flex-wrap items-center gap-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.6 }}
+              >
+                <Button className="group bg-white text-[#1e3a5f] hover:bg-slate-100 font-medium px-8 py-6 text-base rounded-none transition-all duration-300 border-2 border-white hover:border-slate-100">
+                  {t.hero.cta1}
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <button className="flex items-center gap-3 text-white/90 hover:text-white font-medium transition-colors group">
+                  <span className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center group-hover:border-white/50 transition-colors">
+                    <Play className="w-4 h-4 fill-white" />
+                  </span>
+                  {t.hero.cta2}
+                </button>
               </motion.div>
             </div>
+
+            {/* Global text */}
+            <motion.div
+              className="absolute bottom-8 right-8 hidden lg:block"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+            >
+              <p className="text-white/40 text-sm font-medium tracking-[0.3em] uppercase writing-vertical">
+                {t.hero.global}
+              </p>
+            </motion.div>
           </div>
         </motion.div>
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+          className="absolute bottom-8 left-8 z-20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.8 }}
+          transition={{ delay: 1.2 }}
         >
-          <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }} className="flex flex-col items-center gap-2">
-            <span className="text-white/35 text-[11px] font-medium tracking-widest uppercase">{t.hero.scroll}</span>
-            <div className="w-5 h-9 rounded-full border border-white/20 flex items-start justify-center pt-2">
-              <motion.div animate={{ y: [0, 12, 0] }} transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }} className="w-1 h-1.5 bg-white/40 rounded-full" />
-            </div>
+          <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }} className="flex flex-col items-center gap-3">
+            <span className="text-white/50 text-xs font-medium tracking-[0.3em] uppercase">{t.hero.scroll}</span>
+            <div className="w-px h-16 bg-gradient-to-b from-white/50 to-transparent" />
           </motion.div>
         </motion.div>
       </section>
 
+      {/* ── Stats Strip ──────────────────────────────────────────────────────── */}
+      <section className="bg-white py-16 lg:py-20 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+            {t.stats.map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                className={`text-center ${i < 4 ? 'border-r border-slate-200 last:border-r-0 md:border-r' : ''}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <p className="text-5xl lg:text-6xl font-light text-[#1e3a5f] mb-2">
+                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                </p>
+                <p className="text-xs font-medium text-slate-400 tracking-[0.15em] uppercase">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── About ─────────────────────────────────────────────────────────────── */}
-      <section id="about" className="py-28 lg:py-36 bg-white relative overflow-hidden">
-        <div
-          className="absolute top-0 right-0 w-1/3 h-full opacity-[0.03] pointer-events-none"
-          style={{ backgroundImage: `radial-gradient(circle, #0D4B43 1px, transparent 0)`, backgroundSize: '32px 32px' }}
-        />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <section id="about" className="py-24 lg:py-32 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
           <AnimatedSection>
-            <div className="text-center mb-20">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 text-emerald-700 text-xs font-semibold rounded-full mb-5 tracking-widest uppercase">
-                {t.about.tag}
-              </span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5 text-balance">{t.about.title}</h2>
-              <div className="w-16 h-px bg-gradient-to-r from-transparent via-emerald-600 to-transparent mx-auto mb-6" />
-              <p className="text-stone-500 text-lg max-w-2xl mx-auto leading-relaxed">{t.about.sub}</p>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-px bg-[#1e3a5f]" />
+              <span className="text-xs font-medium text-slate-500 tracking-[0.2em] uppercase">{t.about.tag}</span>
             </div>
           </AnimatedSection>
 
-          <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+            {/* Image */}
             <AnimatedSection>
-              <div className="space-y-5">
-                <p className="text-slate-700 text-lg leading-relaxed">{t.about.p1}</p>
-                <p className="text-stone-600 leading-relaxed">{t.about.p2}</p>
-                <p className="text-stone-600 leading-relaxed">{t.about.p3}</p>
-                <motion.div
-                  className="inline-flex items-center gap-2 text-emerald-700 font-semibold cursor-pointer text-sm group pt-2"
-                  whileHover={{ x: isAr ? -5 : 5 }}
-                >
-                  {t.about.link}
-                  <ArrowRight className={`w-4 h-4 group-hover:translate-x-1 transition-transform ${isAr ? 'rotate-180' : ''}`} />
-                </motion.div>
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                <Image
+                  src="/hero-bg.jpg"
+                  alt="BONYA Operations"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/30 to-transparent" />
+                <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-[#1e3a5f] rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold">B</span>
+                    </div>
+                    <span className="font-semibold text-[#1e3a5f]">BONYA</span>
+                  </div>
+                </div>
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.15}>
-              <div className="grid grid-cols-3 gap-5">
-                {t.about.stats.map((stat, i) => {
-                  const Icon = STAT_ICONS[i];
-                  return (
-                    <motion.div
-                      key={stat.l}
-                      className="group relative bg-gradient-to-br from-slate-50 to-stone-100 rounded-2xl p-6 text-center border border-stone-200 hover:border-emerald-300 transition-all duration-300 hover:shadow-xl overflow-hidden"
-                      whileHover={{ y: -6 }}
-                      initial={{ opacity: 0, y: 24 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.1 }}
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/0 to-teal-600/0 group-hover:from-emerald-600/3 group-hover:to-teal-600/4 transition-all duration-500" />
-                      <div className="relative">
-                        <div className="w-11 h-11 mx-auto mb-4 rounded-xl bg-slate-100 border border-stone-200 flex items-center justify-center group-hover:bg-emerald-700 group-hover:border-emerald-700 transition-all duration-300">
-                          <Icon className="w-5 h-5 text-slate-500 group-hover:text-white transition-colors duration-300" />
-                        </div>
-                        <p className="text-3xl font-bold text-slate-800 mb-1">{stat.v}{stat.s}</p>
-                        <p className="text-xs text-stone-500 font-medium">{stat.l}</p>
-                      </div>
-                    </motion.div>
-                  );
-                })}
+            {/* Content */}
+            <AnimatedSection delay={0.1}>
+              <h2 className="text-3xl lg:text-4xl font-serif italic font-normal text-[#1e3a5f] mb-8 leading-tight">
+                {t.about.title}
+              </h2>
+              <div className="space-y-5 text-slate-600 leading-relaxed">
+                <p>{t.about.p1}</p>
+                <p>{t.about.p2}</p>
+                <p>{t.about.p3}</p>
               </div>
+              <motion.a
+                href="#"
+                className="inline-flex items-center gap-2 text-[#1e3a5f] font-medium mt-8 group border-b-2 border-[#1e3a5f] pb-1"
+                whileHover={{ x: isAr ? -5 : 5 }}
+              >
+                {t.about.link}
+                <ArrowRight className={`w-4 h-4 group-hover:translate-x-1 transition-transform ${isAr ? 'rotate-180' : ''}`} />
+              </motion.a>
             </AnimatedSection>
           </div>
 
-          {/* Service Cards */}
+          {/* Vision & Mission Cards */}
+          <div className="grid md:grid-cols-2 gap-6 mt-20">
+            {[t.vision, t.mission].map((item, i) => (
+              <motion.div
+                key={item.title}
+                className="relative bg-[#faf8f5] rounded-lg p-10 overflow-hidden group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+              >
+                <div className="absolute top-8 right-8 text-[120px] font-serif italic text-[#1e3a5f]/5 leading-none select-none">
+                  {item.num}
+                </div>
+                <span className="text-xs font-medium text-[#c9a96a] tracking-[0.15em] uppercase">{item.num}</span>
+                <h3 className="text-2xl font-semibold text-[#1e3a5f] mt-3 mb-4">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed relative z-10">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Aligned with Vision 2030 ─────────────────────────────────────────── */}
+      <section className="py-24 lg:py-32 bg-[#1e3a5f] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-px bg-white/30" />
+              <span className="text-xs font-medium text-white/60 tracking-[0.2em] uppercase">{t.aligned.tag}</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-serif italic font-normal text-white mb-6 leading-tight max-w-2xl">
+              {t.aligned.title}
+            </h2>
+            <p className="text-white/70 text-lg max-w-2xl leading-relaxed">
+              {t.aligned.sub}
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ── Services ──────────────────────────────────────────────────────────── */}
+      <section id="services" className="py-24 lg:py-32 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="w-12 h-px bg-[#1e3a5f]" />
+                <span className="text-xs font-medium text-slate-500 tracking-[0.2em] uppercase">{t.services.tag}</span>
+                <div className="w-12 h-px bg-[#1e3a5f]" />
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-serif italic font-normal text-[#1e3a5f] mb-5">{t.services.title}</h2>
+              <p className="text-slate-500 text-lg max-w-2xl mx-auto">{t.services.sub}</p>
+            </div>
+          </AnimatedSection>
+
           <motion.div
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
             variants={staggerContainer}
@@ -506,22 +614,20 @@ export default function BonyaLanding() {
             whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
           >
-            {t.about.services.map((service, i) => {
+            {t.services.items.map((service, i) => {
               const Icon = SERVICE_ICONS[i];
               return (
                 <motion.div
                   key={service.title}
-                  className="group relative bg-white rounded-2xl p-8 border border-stone-200 hover:border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden"
+                  className="group relative bg-white rounded-lg p-8 border border-slate-200 hover:border-[#1e3a5f]/30 hover:shadow-xl transition-all duration-500"
                   variants={fadeInUp}
                   whileHover={{ y: -8 }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-50/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className={`relative w-12 h-12 rounded-xl bg-gradient-to-br ${SERVICE_GRADIENTS[i]} flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon className="w-6 h-6 text-white" />
+                  <div className="w-14 h-14 rounded-lg bg-[#1e3a5f] flex items-center justify-center mb-6 group-hover:bg-[#c9a96a] transition-colors duration-300">
+                    <Icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="relative text-lg font-bold text-slate-800 mb-3">{service.title}</h3>
-                  <p className="relative text-stone-500 text-sm leading-relaxed">{service.desc}</p>
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-500 via-teal-500 to-slate-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <h3 className="text-lg font-semibold text-[#1e3a5f] mb-3">{service.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">{service.desc}</p>
                 </motion.div>
               );
             })}
@@ -530,106 +636,93 @@ export default function BonyaLanding() {
       </section>
 
       {/* ── Portal ─────────────────────────────────────────────────────────────── */}
-      <section id="access-portal" className="py-28 lg:py-36 bg-gradient-to-b from-slate-50 to-stone-100 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-32 -right-32 w-72 h-72 bg-emerald-200/15 rounded-full blur-3xl" />
-          <div className="absolute -bottom-32 -left-32 w-72 h-72 bg-slate-300/15 rounded-full blur-3xl" />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <section id="access-portal" className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 text-emerald-700 text-xs font-semibold rounded-full mb-5 tracking-widest uppercase">
-                {t.portal.tag}
-              </span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5">{t.portal.title}</h2>
-              <div className="w-16 h-px bg-gradient-to-r from-transparent via-emerald-600 to-transparent mx-auto mb-6" />
-              <p className="text-stone-500 text-lg max-w-2xl mx-auto leading-relaxed">{t.portal.sub}</p>
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="w-12 h-px bg-[#1e3a5f]" />
+                <span className="text-xs font-medium text-slate-500 tracking-[0.2em] uppercase">{t.portal.tag}</span>
+                <div className="w-12 h-px bg-[#1e3a5f]" />
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-serif italic font-normal text-[#1e3a5f] mb-5">{t.portal.title}</h2>
+              <p className="text-slate-500 text-lg max-w-2xl mx-auto">{t.portal.sub}</p>
             </div>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Customer */}
+            {/* Customer Portal */}
             <motion.div
-              className="group relative bg-white rounded-3xl p-10 border border-stone-200 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden"
+              className="group relative bg-white rounded-lg p-10 border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
               whileHover={{ y: -6 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative">
-                <div className="flex items-center justify-between mb-7">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-600 to-slate-800 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform duration-300">
-                    <Users className="w-7 h-7 text-white" />
-                  </div>
-                  <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full tracking-widest uppercase">{t.portal.pathA}</span>
+              <div className="flex items-center justify-between mb-8">
+                <div className="w-14 h-14 rounded-lg bg-[#1e3a5f] flex items-center justify-center group-hover:bg-[#c9a96a] transition-colors duration-300">
+                  <Users className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">{t.portal.cTitle}</h3>
-                <p className="text-stone-500 mb-9 leading-relaxed text-sm">{t.portal.cDesc}</p>
-                <div className="space-y-3">
-                  <Button className="w-full bg-gradient-to-r from-emerald-700 via-emerald-800 to-slate-800 hover:from-emerald-800 hover:to-slate-900 text-white font-semibold py-6 rounded-xl shadow-lg shadow-emerald-700/15 hover:shadow-xl transition-all duration-300 group/btn">
-                    {t.portal.cLogin}
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                  <Button variant="outline" className="w-full border-2 border-stone-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 font-semibold py-6 rounded-xl transition-all duration-300 text-sm">
-                    {t.portal.cSignup}
-                  </Button>
-                </div>
+                <span className="px-3 py-1.5 bg-slate-100 text-slate-500 text-xs font-medium tracking-[0.1em] uppercase rounded">{t.portal.pathA}</span>
+              </div>
+              <h3 className="text-2xl font-semibold text-[#1e3a5f] mb-3">{t.portal.cTitle}</h3>
+              <p className="text-slate-500 mb-8 leading-relaxed text-sm">{t.portal.cDesc}</p>
+              <div className="space-y-3">
+                <Button className="w-full bg-[#1e3a5f] hover:bg-[#152d4a] text-white font-medium py-6 rounded-lg transition-all duration-300 group/btn">
+                  {t.portal.cLogin}
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                </Button>
+                <Button variant="outline" className="w-full border-2 border-slate-200 text-slate-600 hover:bg-slate-50 hover:border-slate-300 font-medium py-6 rounded-lg transition-all duration-300">
+                  {t.portal.cSignup}
+                </Button>
               </div>
             </motion.div>
 
-            {/* Partner */}
+            {/* Partner Portal */}
             <motion.div
-              className="group relative bg-white rounded-3xl p-10 border border-stone-200 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden"
+              className="group relative bg-white rounded-lg p-10 border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
               whileHover={{ y: -6 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative">
-                <div className="flex items-center justify-between mb-7">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-600 to-slate-900 flex items-center justify-center shadow-lg shadow-slate-500/20 group-hover:scale-105 transition-transform duration-300">
-                    <Building2 className="w-7 h-7 text-white" />
-                  </div>
-                  <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full tracking-widest uppercase">{t.portal.pathB}</span>
+              <div className="flex items-center justify-between mb-8">
+                <div className="w-14 h-14 rounded-lg bg-[#c9a96a] flex items-center justify-center group-hover:bg-[#1e3a5f] transition-colors duration-300">
+                  <Building2 className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">{t.portal.pTitle}</h3>
-                <p className="text-stone-500 mb-9 leading-relaxed text-sm">{t.portal.pDesc}</p>
-                <div className="space-y-3">
-                  <Button className="w-full bg-gradient-to-r from-slate-700 via-slate-800 to-slate-900 hover:from-slate-800 hover:to-slate-950 text-white font-semibold py-6 rounded-xl shadow-lg shadow-slate-700/15 hover:shadow-xl transition-all duration-300 group/btn">
-                    {t.portal.pLogin}
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                  <Button variant="outline" className="w-full border-2 border-stone-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 font-semibold py-6 rounded-xl transition-all duration-300 text-sm">
-                    {t.portal.pSignup}
-                  </Button>
-                </div>
-                <p className="text-center text-stone-400 text-xs mt-5">{t.portal.note}</p>
+                <span className="px-3 py-1.5 bg-slate-100 text-slate-500 text-xs font-medium tracking-[0.1em] uppercase rounded">{t.portal.pathB}</span>
               </div>
+              <h3 className="text-2xl font-semibold text-[#1e3a5f] mb-3">{t.portal.pTitle}</h3>
+              <p className="text-slate-500 mb-8 leading-relaxed text-sm">{t.portal.pDesc}</p>
+              <div className="space-y-3">
+                <Button className="w-full bg-[#c9a96a] hover:bg-[#b8985d] text-white font-medium py-6 rounded-lg transition-all duration-300 group/btn">
+                  {t.portal.pLogin}
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                </Button>
+                <Button variant="outline" className="w-full border-2 border-slate-200 text-slate-600 hover:bg-slate-50 hover:border-slate-300 font-medium py-6 rounded-lg transition-all duration-300">
+                  {t.portal.pSignup}
+                </Button>
+              </div>
+              <p className="text-center text-slate-400 text-xs mt-5">{t.portal.note}</p>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* ── Contact ─────────────────────────────────────────────────────────────── */}
-      <section id="contact" className="py-28 lg:py-36 bg-white relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{ backgroundImage: `radial-gradient(circle, #334155 1px, transparent 0)`, backgroundSize: '32px 32px' }}
-        />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <section id="contact" className="py-24 lg:py-32 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 text-emerald-700 text-xs font-semibold rounded-full mb-5 tracking-widest uppercase">
-                {t.contact.tag}
-              </span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5">{t.contact.title}</h2>
-              <div className="w-16 h-px bg-gradient-to-r from-transparent via-emerald-600 to-transparent mx-auto mb-6" />
-              <p className="text-stone-500 text-lg max-w-2xl mx-auto leading-relaxed">{t.contact.sub}</p>
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="w-12 h-px bg-[#1e3a5f]" />
+                <span className="text-xs font-medium text-slate-500 tracking-[0.2em] uppercase">{t.contact.tag}</span>
+                <div className="w-12 h-px bg-[#1e3a5f]" />
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-serif italic font-normal text-[#1e3a5f] mb-5">{t.contact.title}</h2>
+              <p className="text-slate-500 text-lg max-w-2xl mx-auto">{t.contact.sub}</p>
             </div>
           </AnimatedSection>
 
@@ -645,15 +738,15 @@ export default function BonyaLanding() {
               return (
                 <motion.div
                   key={card.title}
-                  className="group text-center p-9 rounded-2xl bg-gradient-to-br from-slate-50 to-stone-50 hover:bg-white border border-stone-200 hover:border-slate-300 hover:shadow-2xl transition-all duration-500"
+                  className="group text-center p-10 rounded-lg bg-slate-50 hover:bg-white border border-transparent hover:border-slate-200 hover:shadow-xl transition-all duration-500"
                   variants={fadeInUp}
                   whileHover={{ y: -7 }}
                 >
-                  <div className={`w-14 h-14 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${CONTACT_GRADIENTS[i]} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="w-14 h-14 mx-auto mb-6 rounded-lg bg-[#1e3a5f] flex items-center justify-center group-hover:bg-[#c9a96a] transition-colors duration-300">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-base font-bold text-slate-800 mb-2">{card.title}</h3>
-                  <p className="text-stone-500 text-sm">{card.val}</p>
+                  <h3 className="text-base font-semibold text-[#1e3a5f] mb-2">{card.title}</h3>
+                  <p className="text-slate-500 text-sm">{card.val}</p>
                 </motion.div>
               );
             })}
@@ -662,34 +755,30 @@ export default function BonyaLanding() {
       </section>
 
       {/* ── Footer ────────────────────────────────────────────────────────────── */}
-      <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-white py-16 relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.035] pointer-events-none"
-          style={{ backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 0)`, backgroundSize: '40px 40px' }}
-        />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid md:grid-cols-4 gap-12 mb-12 pb-12 border-b border-slate-800">
+      <footer className="bg-[#1e3a5f] text-white py-16 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-12 mb-12 pb-12 border-b border-white/10">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-9 h-9 bg-gradient-to-br from-emerald-600 to-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-sm">B</span>
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-[#1e3a5f] font-bold text-lg">B</span>
                 </div>
                 <div>
                   <span className="font-bold text-lg">BONYA</span>
-                  <p className="text-slate-400 text-[9px] tracking-[0.2em] uppercase">Company</p>
+                  <p className="text-white/50 text-[9px] tracking-[0.15em] uppercase">Company</p>
                 </div>
               </div>
-              <p className="text-slate-400 text-sm leading-relaxed">{t.footer.tagline}</p>
+              <p className="text-white/60 text-sm leading-relaxed">{t.footer.tagline}</p>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-              <h4 className="font-semibold text-white text-sm mb-6 tracking-wide">{t.footer.quick}</h4>
+              <h4 className="font-semibold text-white text-sm mb-6">{t.footer.quick}</h4>
               <ul className="space-y-3">
                 {t.footer.links.map((link, i) => {
-                  const hrefs = ['#about', '#access-portal', '#contact'];
+                  const hrefs = ['#about', '#services', '#access-portal', '#contact'];
                   return (
                     <li key={link}>
-                      <a href={hrefs[i]} className="text-slate-400 hover:text-white hover:translate-x-1 inline-flex transition-all duration-300 text-sm">
+                      <a href={hrefs[i]} className="text-white/60 hover:text-white transition-colors text-sm">
                         {link}
                       </a>
                     </li>
@@ -699,29 +788,29 @@ export default function BonyaLanding() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-              <h4 className="font-semibold text-white text-sm mb-6 tracking-wide">{t.footer.contactTitle}</h4>
-              <ul className="space-y-3 text-slate-400 text-sm">
+              <h4 className="font-semibold text-white text-sm mb-6">{t.footer.contactTitle}</h4>
+              <ul className="space-y-3 text-white/60 text-sm">
                 <li className="flex items-center gap-2.5">
-                  <Mail className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                  info@dealcom.com
+                  <Mail className="w-4 h-4 text-[#c9a96a] flex-shrink-0" />
+                  info@bonya.com
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <Phone className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                  +1 (234) 567-890
+                  <Phone className="w-4 h-4 text-[#c9a96a] flex-shrink-0" />
+                  +966 920011074
                 </li>
               </ul>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-              <h4 className="font-semibold text-white text-sm mb-6 tracking-wide">{t.footer.newsletter}</h4>
-              <p className="text-slate-400 text-sm mb-4 leading-relaxed">{t.footer.nlSub}</p>
+              <h4 className="font-semibold text-white text-sm mb-6">{t.footer.newsletter}</h4>
+              <p className="text-white/60 text-sm mb-4 leading-relaxed">{t.footer.nlSub}</p>
               <div className="flex gap-2">
                 <input
                   type="email"
                   placeholder={t.footer.nlPlaceholder}
-                  className="flex-1 bg-slate-800 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-emerald-500 transition-colors"
+                  className="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#c9a96a] transition-colors"
                 />
-                <Button className="bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-slate-700 text-white font-semibold px-4 rounded-lg shadow-lg transition-all duration-300">
+                <Button className="bg-[#c9a96a] hover:bg-[#b8985d] text-white font-medium px-4 rounded-lg transition-all duration-300">
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
@@ -729,10 +818,10 @@ export default function BonyaLanding() {
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-slate-500 text-sm">{t.footer.copyright}</p>
+            <p className="text-white/50 text-sm">{t.footer.copyright}</p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-slate-500 hover:text-white transition-colors">{t.footer.privacy}</a>
-              <a href="#" className="text-slate-500 hover:text-white transition-colors">{t.footer.terms}</a>
+              <a href="#" className="text-white/50 hover:text-white transition-colors">{t.footer.privacy}</a>
+              <a href="#" className="text-white/50 hover:text-white transition-colors">{t.footer.terms}</a>
             </div>
           </div>
         </div>
