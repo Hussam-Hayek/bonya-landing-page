@@ -224,110 +224,188 @@ function LanguageToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => v
   );
 }
 
-// ─── Saudi Arabia Map SVG ─────────────────────────────────────────────────────
+// ─── Saudi Arabia Map SVG (Accurate from @svg-maps/saudi-arabia) ──────────────
 function SaudiMap({ activeRegion, setActiveRegion, regions }: { activeRegion: string | null; setActiveRegion: (id: string | null) => void; regions: typeof translations.en.coverage.regions }) {
-  // Location positions on the map (coordinates matching the accurate Saudi Arabia shape)
+  // Location positions on the accurate Saudi Arabia map (viewBox 0 0 730 600)
   const locations = [
-    { id: 'neom', x: 115, y: 65, name: regions.find(r => r.id === 'neom')?.name },
-    { id: 'madinah', x: 145, y: 115, name: regions.find(r => r.id === 'madinah')?.name },
-    { id: 'jeddah', x: 135, y: 160, name: regions.find(r => r.id === 'jeddah')?.name },
-    { id: 'makkah', x: 148, y: 175, name: regions.find(r => r.id === 'makkah')?.name },
-    { id: 'riyadh', x: 248, y: 145, name: regions.find(r => r.id === 'riyadh')?.name },
-    { id: 'dammam', x: 295, y: 105, name: regions.find(r => r.id === 'dammam')?.name },
-    { id: 'asir', x: 165, y: 235, name: regions.find(r => r.id === 'asir')?.name },
+    { id: 'neom', x: 90, y: 145, name: regions.find(r => r.id === 'neom')?.name },
+    { id: 'madinah', x: 130, y: 235, name: regions.find(r => r.id === 'madinah')?.name },
+    { id: 'jeddah', x: 145, y: 340, name: regions.find(r => r.id === 'jeddah')?.name },
+    { id: 'makkah', x: 175, y: 370, name: regions.find(r => r.id === 'makkah')?.name },
+    { id: 'riyadh', x: 370, y: 330, name: regions.find(r => r.id === 'riyadh')?.name },
+    { id: 'dammam', x: 530, y: 250, name: regions.find(r => r.id === 'dammam')?.name },
+    { id: 'asir', x: 270, y: 500, name: regions.find(r => r.id === 'asir')?.name },
   ];
 
   return (
-    <svg viewBox="0 0 400 320" className="w-full h-auto max-w-xl">
+    <svg viewBox="0 0 730 600" className="w-full h-auto max-w-2xl">
       {/* Definitions for gradients and filters */}
       <defs>
         <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#1e3a5f" />
           <stop offset="100%" stopColor="#162d4d" />
         </linearGradient>
+        <linearGradient id="regionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#243b5a" />
+          <stop offset="100%" stopColor="#1a2d47" />
+        </linearGradient>
         <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+          <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
           <feMerge>
             <feMergeNode in="coloredBlur"/>
             <feMergeNode in="SourceGraphic"/>
           </feMerge>
         </filter>
         <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="2" dy="4" stdDeviation="4" floodColor="#0a1628" floodOpacity="0.5"/>
+          <feDropShadow dx="3" dy="5" stdDeviation="6" floodColor="#0a1628" floodOpacity="0.6"/>
         </filter>
       </defs>
 
-      {/* Saudi Arabia accurate outline */}
-      <motion.path
-        d="M 105 25 
-           L 115 22 L 125 20 L 140 18 L 155 20 L 170 22 
-           L 185 25 L 200 28 L 215 32 L 230 38 L 245 45 
-           L 260 52 L 275 60 L 290 70 L 305 80 L 318 92
-           L 328 105 L 335 118 L 340 132 L 342 145 L 340 158
-           L 335 168 L 328 178 L 318 186 L 305 192 L 292 196
-           L 280 200 L 268 205 L 256 212 L 245 220 L 235 230
-           L 225 242 L 215 255 L 205 268 L 192 278 L 178 285
-           L 165 290 L 152 292 L 140 290 L 130 285 L 122 278
-           L 115 268 L 110 255 L 108 242 L 110 228 L 115 215
-           L 118 200 L 115 185 L 110 170 L 105 155 L 100 140
-           L 95 125 L 92 110 L 90 95 L 88 80 L 90 65 
-           L 95 50 L 100 38 L 105 25 Z"
-        fill="url(#mapGradient)"
-        stroke="#3d5a7f"
-        strokeWidth="1.5"
-        filter="url(#shadow)"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      />
-      
-      {/* Inner detail stroke for depth */}
-      <path
-        d="M 105 25 
-           L 115 22 L 125 20 L 140 18 L 155 20 L 170 22 
-           L 185 25 L 200 28 L 215 32 L 230 38 L 245 45 
-           L 260 52 L 275 60 L 290 70 L 305 80 L 318 92
-           L 328 105 L 335 118 L 340 132 L 342 145 L 340 158
-           L 335 168 L 328 178 L 318 186 L 305 192 L 292 196
-           L 280 200 L 268 205 L 256 212 L 245 220 L 235 230
-           L 225 242 L 215 255 L 205 268 L 192 278 L 178 285
-           L 165 290 L 152 292 L 140 290 L 130 285 L 122 278
-           L 115 268 L 110 255 L 108 242 L 110 228 L 115 215
-           L 118 200 L 115 185 L 110 170 L 105 155 L 100 140
-           L 95 125 L 92 110 L 90 95 L 88 80 L 90 65 
-           L 95 50 L 100 38 L 105 25 Z"
-        fill="none"
-        stroke="#4a6a8f"
-        strokeWidth="0.5"
-        transform="translate(2, 2)"
-        opacity="0.3"
-      />
-
-      {/* Red Sea coastline (west) */}
-      <motion.path
-        d="M 90 65 L 95 50 L 100 38 L 105 25 L 105 25 L 100 38 L 95 50 L 90 65 L 88 80 L 90 95 L 92 110 L 95 125 L 100 140 L 105 155 L 110 170 L 115 185 L 118 200 L 115 215 L 110 228 L 108 242 L 110 255 L 115 268 L 122 278"
-        fill="none"
-        stroke="#5a7a9f"
-        strokeWidth="2"
-        strokeLinecap="round"
-        opacity="0.4"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 2, delay: 0.5 }}
-      />
-
-      {/* Persian Gulf coastline (east) */}
-      <motion.path
-        d="M 318 92 L 328 105 L 335 118 L 340 132 L 342 145 L 340 158 L 335 168 L 328 178 L 318 186"
-        fill="none"
-        stroke="#5a7a9f"
-        strokeWidth="2"
-        strokeLinecap="round"
-        opacity="0.4"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 1.5, delay: 0.8 }}
-      />
+      {/* All regions combined for the country outline with shadow */}
+      <g filter="url(#shadow)">
+        {/* Tabuk Region (Northwest - includes NEOM) */}
+        <motion.path
+          d="M89.197176,284.95041 l1.2,0.84 0,0.66 -1.49,-0.68 0.29,-0.82z m-7.94,-17.27 0.92,0.6 0.42,-0.21 0.96,2.68 -0.7,0 0.08,-1.17 -2.04,-1.11 0.36,-0.79z m4.56,-1.3 0.65,0.16 0.38,1.27 0.55,-0.18 -0.26,0.83 -0.21,-0.47 -1.25,0.04 0.41,-1.09 -0.67,-0.43 0.4,-0.13z m-0.81,-1.47 0.9,0.87 -1.33,-0.1 0.43,-0.77z m-3.62,-2.17 0.56,0.93 -0.85,0.56 -0.43,-0.67 0.72,-0.82z m2.01,-0.4 0.94,2.34 -1.03,-0.85 0.09,-1.49z m0.41,-0.85 0.41,0.44 -0.26,0.62 -0.63,-0.79 0.48,-0.27z m-14.24,-2.19 1.39,1.61 -1.55,0.1 -0.63,-1.01 0.79,-0.7z m2.62,-1.99 0.67,0.53 -0.74,0.07 -1.33,-1.36 -0.02,-1.67 0.47,1.79 1.05,-0.63 -0.1,1.27z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        />
+        
+        {/* Riyadh Region (Central) */}
+        <motion.path
+          d="m456.82718,487.03041 -10.13,2.63 -16.39,2.39 -58.85,5.04 -8.85,-0.7 -3.24,-0.72 -5.22,-2.39 -8.51,-5.59 0,0 -13.54,-12.09 -3.91,-6.36 -2.75,-2.96 -0.22,-1.6 1.23,-6.11 3.34,-6.09 0.08,-2.96 -1.06,-1.73 -3.6,-3.6 -3.07,-4.93 -5.76,-5.01 0,0 -4.34,-7.06 -4.77,-6.36 -0.58,-1.47 1.76,-8.48 -0.54,-6.95 2.33,-3.42 0.68,-2.34 -1.79,-13.1 0.96,-6.16 -0.31,-1.57 -6.45,-1.41 -5.65,1.47 -3.7,-1.28 -1.26,-2.3 0.28,-5.34 0.86,-2.93 -1.84,-1.88 -3.09,-0.85 -14.1,-0.63 -3.01,-1.63 -5.15,-11.26 -0.91,-5.64 -2.1,-4.72 -1.13,-4.86 -4.16,-3.3 -0.36,-3.13 0.44,-3.64 0,0 -0.04,-9.03 1.41,-4.88 -0.94,-3.6 2.95,-4.25 0.4,-3.14 0,0 3.04,-5.08 2.17,-1.58 1.5,0.12 5.17,2.55 3.87,0.81 5.73,0.5 5.67,-0.89 5.69,0.87 2.43,-1.79 0.85,-2.18 -1.91,-3.83 0.15,-2.3 5.42,-6.69 3.27,-2.52 12.88,-3.15 2.84,-2.81 3.09,-1.74 2.28,-4.47 2.02,-1.97 3.13,-0.82 8.3,1.06 7.2,-0.68 5.53,0.22 0.84,-3.9 -0.31,-3.16 -2.52,-4.86 1.08,-2.91 -0.14,-0.86 -6.69,-10.16 -3.6,-3.57 -0.49,-1.52 0.84,-5.74 -0.43,-5.12 4.01,-1.1 4.5,-5.87 2.46,-2.11 4.18,-1.84 0.62,-1.48 -0.15,-2.5 -1.34,-2.5 -3.6,-2.99 -2.35,-0.93 0,0 -0.68,-1.88 0.06,-1.59 0.99,-3.1 2.42,-3.32 3.15,-1.64 0,0 1.94,2.12 1.51,0.52 1.8,-0.86 1.3,-2.23 0,0 3.32,2.32 2.12,2.21 1.4,5.11 1.24,1.53 10.41,6.08 5.75,1.06 3.46,4.22 4.06,3.38 2.34,0.63 5.64,0.11 3.01,0.81 9.86,6.94 2.49,1.19 2.36,0.05 4.41,-1.01 1.55,0.22 6.45,6.08 1.47,2.52 8.88,3.16 3.86,2.08 1.09,2.56 0.43,4.96 0.38,22.63 -0.63,15.07 0.35,7.41 0.68,3.7 1.12,1.79 2.28,1.8 9.44,6.3 9.19,9.16 1.68,2.06 2.95,5.78 1.36,6.89 -0.02,7.75z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        />
+        
+        {/* Mecca Region (Western) */}
+        <motion.path
+          d="m143.70718,343.80041 0,0 0.12,-0.02 -0.12,0.02z m114.74,-19.79 -0.44,3.64 0.36,3.13 4.15,3.3 1.13,4.86 2.11,4.72 0.91,5.64 5.15,11.26 3.01,1.63 14.1,0.63 3.09,0.85 1.84,1.88 -0.85,2.93 -0.29,5.33 1.26,2.31 3.7,1.28 5.65,-1.47 6.45,1.41 0.31,1.57 -0.96,6.17 1.79,13.1 -0.68,2.34 -2.33,3.43 0.55,6.94 -1.76,8.48 0.58,1.47 4.77,6.36 4.34,7.06 0,0 -4.02,1.47 -5.71,3.77 -5.22,-1.3 -2.26,0.25 -3.16,1.52 -4.55,0.28 -4.26,3.81 -6.41,3.06 -10.11,9.24 -2.31,1.14 -2.29,-0.24 -1.4,-1.02 -4.67,-9.07 0,0 -1.98,-1.93 -1.48,-0.22 -5.42,2.76 -4.16,-0.2 -4.61,1.77 -1.91,-1.46 -1.28,-3.77 -1.22,-1.45 -1.43,-0.61 -2.26,0.32 -1.36,1.41 -0.7,2.12 1.11,4.54 -0.12,2.36 -2.69,4.63 -1.37,3.56 -7.73,1.86 -4,4.1 0.17,1.42 0.67,0.7 3.66,1.09 0.97,1.53 -0.31,5.28 0.91,3.89 -0.27,4.44 1.3,1.54 3.69,2.13 2.06,3.06 1.59,1.05 2.59,0 2.21,-1.08 2.58,-8.98 2.4,-4.46 1.52,-0.59 4.61,-0.04 0.79,-0.5 0,0 1.51,-0.74 2.29,0.13 1.85,1.88 0.21,1.52 -1.31,6.92 2.19,4.44 -1.27,4.6 -0.76,1.42 -1.52,0.75 -4.74,-0.43 -2.24,0.37 -3.88,2.82 -0.75,0.06 -1.97,-1.87 -0.49,10 0.61,2.97 1.02,1.48 1.44,0.48 6.71,0.21 2.11,1.21 2.98,9.14 -1.5,6.41z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        />
+        
+        {/* Medina Region */}
+        <motion.path
+          d="m130.84718,324.65041 -0.9,-0.61 -0.33,0.61 -0.7,-0.29 -0.33,-0.44 -1.1,-1 0.38,-0.9 -1,0.41 -1.03,-1.53 -1.82,-1.19 0.16,-0.31 -0.62,-0.34 -1.13,0.46 -3.64,-2.84 0.62,-0.51 -0.59,-0.29 0.58,-1.68 -1.39,0.76 0.45,0.38 -0.44,1.27 -1.68,-0.19 -2.75,-2.06 -1.19,-2.11 -0.79,0.16 -0.38,-0.71 -0.69,-0.14 -0.09,-0.83 -1.55,0.6 -1.04,-0.36 -0.08,0.81 0.54,0.16 -0.37,0.91 -1.51,0.05 -0.66,-0.98 -1.17,0.09 -1.82,-2.71 -1.49,-1.07 0.31,-1.82 0.67,0.46 0.26,-1.12 -1.18,-1.47 -0.42,-1.45 -1.04,-0.88z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        />
+        
+        {/* Eastern Province */}
+        <motion.path
+          d="m545.08718,262.60041 1.22,0.53 0.35,2.07 -0.6,-1.32 -1.01,-0.6 0.04,-0.68z m-8.35,-39.01 0.87,0.69 -0.05,1.6 -1.18,-1.16 -1.01,-0.12 0.21,-0.65 1.16,-0.36z m-18.37,-29.14 1.75,1.05 4.11,1.08 -1.87,0.05 -0.52,-0.26 -2.37,0.75 -0.45,-0.6 0.45,-0.25 -0.11,-0.49 -1.17,-0.55 -2.13,2.34 0.34,0.57 -0.4,-0.13 -0.22,-0.78 0.55,-1.55 0.7,-0.87 1.34,-0.36z m19.57,33.55 0.38,0.99 0.46,-1.63 0.45,0.11 -0.06,2.39 0.79,0.44 1.19,-1.76 -0.36,-0.33 0.38,-1.81 0.25,0.39 0.12,1.06 0.38,-0.61 0.05,1.18 -0.98,0.58 0.08,1.05 -0.63,0.11 1.65,1.52 0.52,1.62 -0.54,4.1 0.45,0.68 -0.36,0.03 -0.1,1.48 -1,1.13 0.19,-0.78 -0.87,-1.22 -0.16,2.24 0.42,0.52 -0.83,2.12 0.19,1.3 -0.75,0.42 -2.62,-5.96 -0.76,-0.54 -0.52,0.32 -1.15,2.79 0.89,1.29 -0.52,0.67 0.04,3.02 0.61,0.16 0.8,-0.92 0.81,0.74 1.37,0.1 0.5,0.75 -0.15,0.79 0.63,0.57 -0.69,0.16 -0.37,1.04 1.28,2.91 1.81,2.68 1.09,0.66 0.7,2.02 0.75,0.4 -0.23,0.88 -0.41,0.18 -0.4,-1.47 -1.42,-0.33 -1,-1.47 -0.55,0.17 -0.47,-0.58 0.68,1.74 1.09,0.76 0.05,0.56 0.51,-0.72 0.22,0.28 0.24,1.8 1.28,1.16 0.67,1.46 1.26,0.44 0.07,1.1 2.04,2.54 0.4,0.04 -0.05,-1.1 -0.68,-0.91 0.66,-0.53 0.62,1.64 3.23,2.49 1.33,4.04 -0.34,2.41 1.25,2.03 -0.41,1.78 0.83,2.56 -0.27,0.88 0.89,0.45 -0.5,-0.65 0.32,-0.82 2.52,3.53 1.05,3.3 0.95,0.04 0.54,0.69 1.49,6.53 0.64,-1.84 1.58,-0.3 -0.25,0.48 1.08,2.13 3.69,4.38 4.58,0.8 2.45,-0.96 1.63,-1.8 1.16,0.39 1,-0.33 -0.1,0.51 0.6,0.44 0.76,-0.35 -0.66,1.28 0.13,2.42 1.45,-0.87 0.37,-1.39 1.6,-1.3 -0.09,-0.95 0.89,0.53 0.53,-0.43 0.41,1.64 1.03,-0.58 0.76,0.76 -0.62,0.64 -1.21,0.07 -0.54,0.95 -0.44,-0.16 -0.42,1.48 -3.07,2.44 -0.6,3.09 -0.56,0.13 0.13,1.7 2.24,0.42 0.9,-1.18 2.03,-0.18 1.67,0.66 1.51,2.12 1.63,-0.07 0.75,1.18 -0.51,4.23 34.3,41.63 23.79,4.76 59.71,13.76 7.05,-7.46 15.68,25.98 -22.97,73.24 -103.4,36.4 -39.96,7.94 -57.87,6.31 -32.09,15.68 -20.91,25.6 -4.87,12.21 -1.53,0.93z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        />
+        
+        {/* Asir Region (Southwest) */}
+        <motion.path
+          d="m303.24718,558.19041 -1.98,-3.01 -2.95,-0.6 -0.68,-0.57 -2.65,-4.63 -3.6,-1.82 0.14,-4.42 -1,-1.12 -2.21,0.88 -2.87,2.16 -1.21,2.1 -1.66,6.75 -0.57,0.66 -1.4,0.14 -1.52,-0.63 -3.25,-3.16 -1.59,-3.73 -1.28,-1.24 -8.28,-0.4 -0.73,-0.64 -0.85,-2.89 -1.08,-1.35 -2.16,-0.23 -2.94,0.45 -0.74,-0.47 -0.28,-1.5 0.83,-7.27 -1.27,-1.03 -4.46,0.47 0,0 1.5,-6.41 -2.97,-9.14 -2.11,-1.2 -6.71,-0.21 -1.43,-0.49 -1.03,-1.47 -0.61,-2.97 0.49,-10 1.97,1.88 0.75,-0.06 3.87,-2.82 2.24,-0.38 4.74,0.44 1.52,-0.75 0.76,-1.42 1.27,-4.6 -2.19,-4.44 1.31,-6.92 -0.21,-1.51 -1.85,-1.89 -2.29,-0.13 -1.5,0.74 0,0 4.26,-8.69 -0.23,-3.55 0.84,-1.79 5.82,-3.97 1.04,-1.45 -0.11,-1.59 -2.05,-1.97 -0.23,-0.79 2.15,-6.42 0,0 4.67,9.08 1.4,1.02 2.28,0.24 2.31,-1.13 10.11,-9.25 6.41,-3.06 4.26,-3.8 4.55,-0.28 3.16,-1.52 2.26,-0.24 5.21,1.3 5.72,-3.77 4.02,-1.46 0,0 5.76,5.01 3.07,4.93 3.6,3.6 1.06,1.73 -0.08,2.96 -3.34,6.09 -1.23,6.11 0.22,1.6 2.75,2.96 3.91,6.36 13.54,12.09 0,0 -0.04,6.08 -1.12,1.39 -3.85,1.94 -0.69,1.59 1.76,8.57 -0.17,2.12 -0.97,2.22 -1.22,1.41 -2.38,1.42 -6.32,2.02 -0.95,1.05 -1.06,3.02 -1.08,1.48 -8.21,7.56 -3.08,3.43 -0.88,1.69 -0.08,1.66 1.38,6.12 -0.77,8.37 -0.67,1.47 1.3,5.93 -1.15,3.24 0,0 -0.11,1.8 -2.37,-2.3 -5.29,-3.37 -2.46,-0.34z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        />
+        
+        {/* Ha'il Region */}
+        <motion.path
+          d="m183.65718,221.36041 1.99,-2.39 2.34,-7.76 3.13,-3.74 0,0 4.44,-4.13 0.29,-2.41 0,0 -0.36,-0.76 0,0 -2.95,-1.84 0,0 -0.82,-0.36 0,0 -3.73,-2.16 -1.4,-3.91 0,0 -0.14,-0.92 0,0 -0.39,-1.63 0,0 -2.24,-9.37 -1.05,-2.51 0,0 -1.4,-1.64 -2.37,-0.99 0,0 -0.77,-0.46 -1.33,-2.43 -0.75,-0.31 0,0 -2.31,-0.67 0,0 -1.3,-1.59 0,0 -2.94,-2.27 -4.95,-1.3 0,0 -1.54,-0.24 0,0 -4.08,-0.72 0,0 -2.36,-0.52 -1.13,-1.33z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        />
+        
+        {/* Al-Qassim Region */}
+        <motion.path
+          d="m238.57718,264.11041 1.2,-1.37 4.95,-0.74 6,-3.57 5.95,-0.77 0.81,-0.65 0.05,-0.82 -2.4,-4.78 0.32,-2.44 1.26,-1.51 0.86,-0.19 3.95,1.42 2.43,0.25 0.47,-0.77 -0.82,-6.33 1.89,-4.8 0.77,-0.41 1.6,0.52 3.32,-0.78 0.87,-4.3 4.75,-4.83 11.89,-9.24 11.31,-5.23 2.76,-5.79 2.72,-2.76 14.5,-7.43 4.15,-1.34 2.37,0.86 4.44,4.49 5.99,4.12 7.47,0.54 5.05,-5.84z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+        />
+        
+        {/* Northern Borders Region */}
+        <motion.path
+          d="m403.89718,130.68041 -12.46,4.39 -8.25,8.72 -12.66,23.68 -9.15,12.15 -1.29,4.67 0.39,1.52 1.47,1.83 0,0 -1.3,2.23 -1.8,0.86 -1.51,-0.52 -1.94,-2.12 0,0 -1.03,-1.87 -6.08,-5.52 -1.62,-0.95 -3.28,-1.26 -9.98,-1.29 -2.44,-1.44 -2.02,-2.48 -2.78,-7.7 -5.28,-9.66 -1.08,-1.62 -1.58,-1.23 -1.57,0.21 -5.05,3.38 -2.52,0.84 -6,-3.12 -6.49,0.31 -0.96,-0.31 -1.42,-1.46 -0.88,-6.22 -0.67,-0.8 -2.68,0.47 -4.62,2.48 -3.99,0.21 -2.52,-1.46 -4.2,-5.16 -2.37,-1.99 -14.47,-3.51 -4.45,0.36 -4.76,1.35 -12.17,-3.53 -20.96,4.87 -2.37,-0.37 -4.38,-1.9z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+        />
+        
+        {/* Al-Jawf Region */}
+        <motion.path
+          d="m13.437176,126.05041 0.66,-2.82 0.74,-0.76 -0.18,-0.82 1.04,-0.61 -0.48,-1.92 0.81,-0.46 -0.24,-0.86 0.61,-1.36 38.21,6.79 14.65,-12.07 8.85,-14.78 25.76,-5.16 5.78,-13.18 11.32,-6.78 -34.26,-39.72 33.69,-9.9z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.9 }}
+        />
+        
+        {/* Najran Region */}
+        <motion.path
+          d="m399.93718,569.40041 -17.23,-2.36 -6.25,-0.42 -6.25,-4.03 -19.73,0 -1.39,0.98 -1.95,0.27 -2.64,-1.39 -2.7,0.12 -8.79,1.12 -0.82,1.52 -1.08,-1.34 -2.95,0.53 -1.37,1.92 -2.61,-0.72 -1.6,0.43 -1.97,-0.29 -0.68,-0.89 -2.02,0.36 -2.59,-2.7 0.07,-1.04z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.0 }}
+        />
+        
+        {/* Jizan Region */}
+        <motion.path
+          d="m260.53718,593.84041 0.42,0.19 0.18,-0.09 0.34,0.26 -0.65,1.12 -0.68,-0.76 0.39,-0.72z m-0.48,-3.22 0.36,0.53 -0.42,1.5 -0.08,-0.96 -0.49,0.77 -0.56,-1.17 0.35,-0.56 0.84,-0.11z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.1 }}
+        />
+        
+        {/* Al-Bahah Region */}
+        <motion.path
+          d="m260.01718,447.12041 -2.15,6.42 0.23,0.79 2.05,1.97 0.11,1.59 -1.04,1.45 -5.82,3.97 -0.84,1.79 0.23,3.55 -4.26,8.69z"
+          fill="url(#regionGradient)"
+          stroke="#3d5a7f"
+          strokeWidth="1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.2 }}
+        />
+      </g>
 
       {/* Location markers */}
       {locations.map((loc, i) => (
@@ -338,23 +416,23 @@ function SaudiMap({ activeRegion, setActiveRegion, regions }: { activeRegion: st
               <motion.circle
                 cx={loc.x}
                 cy={loc.y}
-                r="16"
+                r="22"
                 fill="none"
                 stroke="#D4AF6A"
-                strokeWidth="2"
+                strokeWidth="3"
                 initial={{ scale: 0.8, opacity: 1 }}
-                animate={{ scale: 2, opacity: 0 }}
+                animate={{ scale: 2.2, opacity: 0 }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               />
               <motion.circle
                 cx={loc.x}
                 cy={loc.y}
-                r="16"
+                r="22"
                 fill="none"
                 stroke="#D4AF6A"
-                strokeWidth="1"
+                strokeWidth="2"
                 initial={{ scale: 0.8, opacity: 0.8 }}
-                animate={{ scale: 2.5, opacity: 0 }}
+                animate={{ scale: 2.8, opacity: 0 }}
                 transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
               />
             </>
@@ -364,12 +442,12 @@ function SaudiMap({ activeRegion, setActiveRegion, regions }: { activeRegion: st
           <motion.circle
             cx={loc.x}
             cy={loc.y}
-            r="14"
+            r="20"
             fill="#D4AF6A"
-            opacity={activeRegion === loc.id ? 0.3 : 0.15}
+            opacity={activeRegion === loc.id ? 0.35 : 0.2}
             filter="url(#glow)"
             initial={{ scale: 0 }}
-            animate={{ scale: activeRegion === loc.id ? 1.2 : 1 }}
+            animate={{ scale: activeRegion === loc.id ? 1.3 : 1 }}
             transition={{ delay: i * 0.1, duration: 0.3 }}
           />
           
@@ -377,13 +455,13 @@ function SaudiMap({ activeRegion, setActiveRegion, regions }: { activeRegion: st
           <motion.circle
             cx={loc.x}
             cy={loc.y}
-            r="9"
+            r="14"
             fill={activeRegion === loc.id ? '#D4AF6A' : '#243b5a'}
             stroke="#D4AF6A"
-            strokeWidth="2.5"
+            strokeWidth="3"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            whileHover={{ scale: 1.25 }}
+            whileHover={{ scale: 1.2 }}
             transition={{ delay: 0.5 + i * 0.1, type: 'spring', stiffness: 400 }}
             onMouseEnter={() => setActiveRegion(loc.id)}
             onMouseLeave={() => setActiveRegion(null)}
@@ -394,7 +472,7 @@ function SaudiMap({ activeRegion, setActiveRegion, regions }: { activeRegion: st
           <motion.circle
             cx={loc.x}
             cy={loc.y}
-            r="3.5"
+            r="5"
             fill={activeRegion === loc.id ? '#1e3a5f' : '#D4AF6A'}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -404,26 +482,26 @@ function SaudiMap({ activeRegion, setActiveRegion, regions }: { activeRegion: st
           
           {/* Label with background */}
           <motion.g
-            initial={{ opacity: 0, y: 5 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 + i * 0.1 }}
             className="pointer-events-none"
           >
             <rect
-              x={loc.x - 35}
-              y={loc.y - 30}
-              width="70"
-              height="16"
-              rx="4"
-              fill={activeRegion === loc.id ? '#D4AF6A' : 'rgba(30, 58, 95, 0.9)'}
-              opacity={activeRegion === loc.id ? 1 : 0.85}
+              x={loc.x - 50}
+              y={loc.y - 42}
+              width="100"
+              height="22"
+              rx="6"
+              fill={activeRegion === loc.id ? '#D4AF6A' : 'rgba(30, 58, 95, 0.95)'}
+              opacity={activeRegion === loc.id ? 1 : 0.9}
             />
             <text
               x={loc.x}
-              y={loc.y - 19}
+              y={loc.y - 26}
               textAnchor="middle"
               fill={activeRegion === loc.id ? '#1a2f4a' : 'white'}
-              fontSize="10"
+              fontSize="13"
               fontWeight="600"
               className="select-none"
             >
@@ -873,7 +951,7 @@ export default function BonyaLanding() {
         </div>
       </section>
 
-      {/* ── Access Portal ───────────────────────────────────────────────────────── */}
+      {/* ── Access Portal ───────────────────────────────────��───────────────────── */}
       <section id="access-portal" className="py-24 bg-gradient-to-b from-white to-stone-50 relative overflow-hidden">
         <div className="absolute top-1/2 right-0 w-96 h-96 bg-emerald-50 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 opacity-60" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
